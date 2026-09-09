@@ -1,0 +1,2950 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Epixx Qbox scripts — qbx_properties, qbx_appearance, qbx_skills, qbx_propplacer and our qbx_core build.">
+      
+      
+      
+        <link rel="canonical" href="https://epixx1337.github.io/docs/qbx_appearance/config/">
+      
+      
+        <link rel="prev" href="../readme/">
+      
+      
+        <link rel="next" href="../editor/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Configuration - Epixx Scripts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Epixx Scripts" class="md-header__button md-logo" aria-label="Epixx Scripts" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Epixx Scripts
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="lime"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Epixx1337" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Epixx1337
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../qbx_properties/" class="md-tabs__link">
+          
+  
+  
+  qbx_properties
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  qbx_appearance
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../qbx_skills/" class="md-tabs__link">
+          
+  
+  
+  qbx_skills
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../qbx_propplacer/" class="md-tabs__link">
+          
+  
+  
+  qbx_propplacer
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../qbx_core/" class="md-tabs__link">
+          
+  
+  
+  qbx_core
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Epixx Scripts" class="md-nav__button md-logo" aria-label="Epixx Scripts" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Epixx Scripts
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Epixx1337" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Epixx1337
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    qbx_properties
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    qbx_properties
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_properties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_properties/install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_properties/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ & troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_properties/readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full reference (README)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_properties/upgrades-and-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Property types & upgrades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_properties/garage-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Garage systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_properties/phone-integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phone integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_properties/placeable-items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Placeable inventory items
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_properties/third-party-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Embedding the UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_properties/prp-apartments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prodigy apartments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_properties/starlite-motel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Starlite Motel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    qbx_appearance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    qbx_appearance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ & troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full reference (README)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configsharedlua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        config/shared.lua
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="config/shared.lua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tattoos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tattoos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clothingbag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clothingBag
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagesource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        imageSource
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physicalitems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        physicalItems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outfits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        outfits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        studio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        creation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configclientlua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        config/client.lua
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configserverlua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        config/server.lua
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="config/server.lua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clothingaccess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clothingAccess
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configpedslua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        config/peds.lua
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configtattooslua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        config/tattoos.lua
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shareddefaultslua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shared/defaults.lua
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="shared/defaults.lua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-ways-to-write-an-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two ways to write an entry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-a-different-bare-top" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: a different bare top
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taking-a-shirt-off-resetwith" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taking a shirt off: resetWith
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The editor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Screenshot studio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outfits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outfits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Events & exports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory items
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cdn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDN thumbnails
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conflicts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known conflicts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../internals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Internals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    qbx_skills
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    qbx_skills
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_skills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_skills/install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_skills/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ & troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_skills/readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full reference (README)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_skills/integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrating your scripts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    qbx_propplacer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    qbx_propplacer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_propplacer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_propplacer/install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_propplacer/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ & troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_propplacer/readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full reference (README)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    qbx_core
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    qbx_core
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_core/install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_core/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ & troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_core/readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full reference (README)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configsharedlua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        config/shared.lua
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="config/shared.lua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tattoos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tattoos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clothingbag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clothingBag
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagesource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        imageSource
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physicalitems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        physicalItems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outfits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        outfits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        studio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        creation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configclientlua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        config/client.lua
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configserverlua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        config/server.lua
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="config/server.lua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clothingaccess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clothingAccess
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configpedslua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        config/peds.lua
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configtattooslua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        config/tattoos.lua
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shareddefaultslua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shared/defaults.lua
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="shared/defaults.lua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-ways-to-write-an-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two ways to write an entry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-a-different-bare-top" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: a different bare top
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taking-a-shirt-off-resetwith" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taking a shirt off: resetWith
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h1>
+<p>Four files under <code>config/</code>. <code>shared.lua</code> loads on both sides, <code>client.lua</code> and
+<code>peds.lua</code> on the client, <code>server.lua</code> only on the server (identifiers and API
+keys never reach clients). The bare-body drawables live in
+<code>shared/defaults.lua</code> — see the last section.</p>
+<h2 id="configsharedlua">config/shared.lua<a class="headerlink" href="#configsharedlua" title="Permanent link">&para;</a></h2>
+<h3 id="tattoos">tattoos<a class="headerlink" href="#tattoos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>maxOpacityLayers</code></td>
+<td>Tattoo opacity is produced by stacking the same decoration; this is the stack size at 100% opacity. Higher = finer opacity steps, more decoration slots used.</td>
+</tr>
+<tr>
+<td><code>maxPerPlayer</code></td>
+<td>Maximum tattoos worn at once (the game's decoration budget is finite).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="clothingbag">clothingBag<a class="headerlink" href="#clothingbag" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>item</code></td>
+<td>ox_inventory item name (see <code>docs/items.md</code>).</td>
+</tr>
+<tr>
+<td><code>cooldown</code></td>
+<td>Seconds between outfit switches via the bag.</td>
+</tr>
+<tr>
+<td><code>uses</code></td>
+<td>Uses per bag, <code>0</code> = unlimited. The bag is removed on its last use.</td>
+</tr>
+<tr>
+<td><code>menu</code></td>
+<td><code>'nui'</code> for the outfit picker overlay, <code>'oxmenu'</code> for an ox_lib context menu.</td>
+</tr>
+</tbody>
+</table>
+<p>Using the bag plays a synchronized kneel scene with an animated duffel prop and
+keeps the player kneeling until an outfit is picked or the menu is closed.</p>
+<h3 id="imagesource">imageSource<a class="headerlink" href="#imagesource" title="Permanent link">&para;</a></h3>
+<p><code>'local'</code> serves thumbnails through <code>nui://</code> from the <code>screenshots/</code> folder
+(every client downloads them with the resource). <code>'cdn'</code> loads them from
+uploaded URLs instead — see <code>docs/cdn.md</code>.</p>
+<h3 id="physicalitems">physicalItems<a class="headerlink" href="#physicalitems" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td>Master toggle for physical clothing items and the item-based outfit sharing mode.</td>
+</tr>
+<tr>
+<td><code>item</code></td>
+<td>The ONE generic ox_inventory item used for every slot; metadata carries the slot, collection pair, label and thumbnail.</td>
+</tr>
+<tr>
+<td><code>slots</code></td>
+<td>Per-slot definition: chat <code>command</code>, display <code>label</code>, the <code>component</code> or <code>prop</code> id, and the equip animation (<code>anim</code>, optional <code>animOff</code> for a different take-off animation). Optional <code>resetWith</code>: component ids that go back to their bare defaults when the slot is stripped and are restored when the item is put back on (the shipped shirt slot resets arms, undershirt and decals).</td>
+</tr>
+</tbody>
+</table>
+<p>Running a slot's command (<code>/pants</code>, <code>/hat</code>, ...) plays the undress animation,
+swaps the slot to its naked default (<code>shared/defaults.lua</code>, see below) and puts
+the piece in the inventory. Using the item plays the dress animation and
+re-equips it. Items refuse to equip on the other body type (drawable indexes differ per model).</p>
+<h3 id="outfits">outfits<a class="headerlink" href="#outfits" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>maxSaved</code></td>
+<td>Saved outfits per player, <code>0</code> = unlimited.</td>
+</tr>
+<tr>
+<td><code>maxGroupOutfits</code></td>
+<td>Presets per job/gang.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="studio">studio<a class="headerlink" href="#studio" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>recolorHair</code></td>
+<td>Recolor hair thumbnails to <code>hairColor</code> during processing. Freemode hair captures untinted (the engine can't tint it on a headless mannequin), so the processor remaps it to the target color; <code>false</code> saves the raw untinted capture instead and hides the studio's hair color swatches.</td>
+</tr>
+<tr>
+<td><code>hairColor</code> / <code>hairHighlight</code></td>
+<td>Hair color the thumbnails are recolored to — a neutral brown reads best on dark UI tiles.</td>
+</tr>
+<tr>
+<td><code>heroAngle</code></td>
+<td>Degrees off the frontal axis for the 3/4 "hero" framing; <code>0</code> = dead-on frontal.</td>
+</tr>
+<tr>
+<td><code>cameraHeight</code></td>
+<td>Camera elevation as a fraction of camera distance.</td>
+</tr>
+<tr>
+<td><code>propPoses</code></td>
+<td>Pose played while shooting a prop slot (watches/bracelets raise the wrist toward the camera). Posed items are captured with a single chroma-keyed shot instead of the two-capture matte, because a playing animation would differ between the two captures.</td>
+</tr>
+<tr>
+<td><code>decalBase</code></td>
+<td>Decals (component 10) are overlays on the body surface and cannot render without a base outfit worn; configured per model.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation">creation<a class="headerlink" href="#creation" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>freemodeOnly</code></td>
+<td>Character creation hides the ped tab and derives the model from multichar's <code>charinfo.gender</code>.</td>
+</tr>
+<tr>
+<td><code>defaultMale</code> / <code>defaultFemale</code></td>
+<td>Models used per gender.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configclientlua">config/client.lua<a class="headerlink" href="#configclientlua" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reloadSkinCooldown</code></td>
+<td>Milliseconds between <code>/reloadskin</code> uses.</td>
+</tr>
+<tr>
+<td><code>stores</code></td>
+<td>Shop zones (<code>clothing \| barber \| tattoo \| surgeon</code>), <code>coords.w</code> is the zone heading.</td>
+</tr>
+<tr>
+<td><code>lockers</code></td>
+<td>Predefined job/gang locker locations, see below.</td>
+</tr>
+<tr>
+<td><code>blips</code></td>
+<td>Map blips per store and locker type.</td>
+</tr>
+<tr>
+<td><code>shopSections</code></td>
+<td>Which editor sections each shop type unlocks (the surgeon sells face work, the barber hair, etc.).</td>
+</tr>
+</tbody>
+</table>
+<p>Lockers open the group outfit view for members of the group at or above the
+minimum grade. Their blip is only created for members of that group (and
+appears/disappears live on job or gang changes):</p>
+<div class="highlight"><pre><span></span><code><span class="nv">lockers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'job_locker'</span><span class="p">,</span><span class="w">            </span><span class="c1">-- or 'gang_locker'</span>
+<span class="w">        </span><span class="nv">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'police'</span><span class="p">,</span>
+<span class="w">        </span><span class="nv">minGrade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nv">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'LSPD Locker Room'</span><span class="p">,</span><span class="w">     </span><span class="c1">-- blip name, optional</span>
+<span class="w">        </span><span class="nv">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">vec4</span><span class="p">(</span><span class="mf">452.05</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">992.94</span><span class="p">,</span><span class="w"> </span><span class="mf">30.69</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">),</span>
+<span class="w">        </span><span class="nv">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">vec3</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">),</span>
+<span class="w">        </span><span class="nv">blip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">},</span>
+</code></pre></div>
+<p>Zones can also be created in-game with <code>/appearancezone</code> — those live in the
+database and broadcast to every player instantly.</p>
+<h2 id="configserverlua">config/server.lua<a class="headerlink" href="#configserverlua" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>legacyMirror</code></td>
+<td>Mirror every save into the legacy <code>playerskins</code> table in illenium format, for resources that still read it. Turn off after migrating — see <code>docs/migration.md</code>.</td>
+</tr>
+<tr>
+<td><code>studioGroup</code></td>
+<td>ox_lib principal allowed to run studio/convert commands.</td>
+</tr>
+<tr>
+<td><code>studioAce</code></td>
+<td>Ace gating the capture callbacks: <code>add_ace group.admin qbx_appearance.studio allow</code>.</td>
+</tr>
+<tr>
+<td><code>studioCommands</code></td>
+<td><code>false</code> removes every <code>/screenshot*</code> command entirely.</td>
+</tr>
+<tr>
+<td><code>convert.batchSize</code></td>
+<td>Legacy rows converted per client round-trip by <code>/convertappearance</code>.</td>
+</tr>
+<tr>
+<td><code>imageUpload</code></td>
+<td>CDN provider, API key and auto-upload toggle — see <code>docs/cdn.md</code>.</td>
+</tr>
+<tr>
+<td><code>pedAccess</code></td>
+<td>Per-player ped grants by any identifier (<code>citizenid:</code>, <code>license:</code>, <code>license2:</code>, <code>steam:</code>, <code>discord:</code>, <code>fivem:</code>). Grants extra models beyond the global policy; bypasses <code>freemodeOnly</code> and the category toggles, never the blacklist. Server-side only.</td>
+</tr>
+<tr>
+<td><code>clothingAccess</code></td>
+<td>Restrict clothing per job, gang, identifier or Discord role — see below.</td>
+</tr>
+<tr>
+<td><code>prices</code></td>
+<td>Charge per shop visit; <code>0</code> disables charging for that type.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="clothingaccess">clothingAccess<a class="headerlink" href="#clothingaccess" title="Permanent link">&para;</a></h3>
+<p>Hide specific drawables or whole DLC collections from the editor based on who
+the player is. Rules are resolved server-side per player when the editor opens
+— identifiers and role checks never reach the client, only the resulting list
+of what to hide.</p>
+<p>Each rule names the clothing it covers (<code>collections</code> for whole packs,
+<code>items</code> for single drawables) and who it applies to:</p>
+<ul>
+<li><code>mode = 'whitelist'</code> (default) — the clothing is hidden from everyone
+  <strong>except</strong> matching players</li>
+<li><code>mode = 'blacklist'</code> — the clothing is hidden <strong>from</strong> matching players</li>
+</ul>
+<p>A player matches through any of: <code>jobs</code>/<code>gangs</code> (name → minimum grade),
+<code>identifiers</code> (same formats as <code>pedAccess</code>), or <code>roles</code> (see below).</p>
+<div class="highlight"><pre><span></span><code><span class="nv">clothingAccess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nv">roleProvider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">rules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">-- police uniforms: only officers see the pack</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nv">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'whitelist'</span><span class="p">,</span>
+<span class="w">            </span><span class="nv">collections</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">'mp_m_police_pack'</span><span class="p">,</span><span class="w"> </span><span class="s1">'mp_f_police_pack'</span><span class="w"> </span><span class="p">},</span>
+<span class="w">            </span><span class="nv">jobs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">police</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nv">sheriff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="c1">-- one specific mask for a VIP player and a Discord booster role</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nv">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'whitelist'</span><span class="p">,</span>
+<span class="w">            </span><span class="nv">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="p">{</span><span class="w"> </span><span class="nv">component</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'mp_m_2024_01'</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="p">},</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nv">identifiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">'citizenid:ABC12345'</span><span class="w"> </span><span class="p">},</span>
+<span class="w">            </span><span class="nv">roles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">'1146792312345678901'</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="c1">-- keep a bugged pack away from everyone except staff</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nv">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'blacklist'</span><span class="p">,</span>
+<span class="w">            </span><span class="nv">collections</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">'broken_pack'</span><span class="w"> </span><span class="p">},</span>
+<span class="w">            </span><span class="nv">identifiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">},</span>
+</code></pre></div>
+<p>Collection names are per gender — list both the <code>mp_m_</code> and <code>mp_f_</code> variants
+to cover both models.</p>
+<p><code>roles</code> requires a Discord integration, since FiveM cannot read guild roles by
+itself. Point <code>roleProvider</code> at whatever your server uses; it receives a
+player source and returns a list of role ids:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">roleProvider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">source</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nv">exports</span><span class="p">.</span><span class="py">your_discord_resource</span><span class="p">:</span><span class="nf">GetRoles</span><span class="p">(</span><span class="nv">source</span><span class="p">)</span>
+<span class="kr">end</span><span class="p">,</span>
+</code></pre></div>
+<p>This gating is a UI filter (like illenium's DLC whitelist): hidden items don't
+appear in the browser. It does not strip already-saved outfits when someone
+loses access.</p>
+<h2 id="configpedslua">config/peds.lua<a class="headerlink" href="#configpedslua" title="Permanent link">&para;</a></h2>
+<p>Ped model policy, evaluated in order:</p>
+<ol>
+<li><code>blacklist</code> always wins</li>
+<li><code>freemodeOnly</code> limits everything to the freemode models</li>
+<li><code>whitelist</code> (when non-empty) limits selection to listed models</li>
+<li>category toggles (<code>allowHumanPeds</code> / <code>allowAnimalPeds</code>) filter the rest</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>whitelist</code></td>
+<td>Models players may always pick (bypasses category toggles, not the blacklist).</td>
+</tr>
+<tr>
+<td><code>models</code></td>
+<td>Additional human peds offered when <code>allowHumanPeds</code> is true.</td>
+</tr>
+<tr>
+<td><code>blacklist</code></td>
+<td>Models nobody may use.</td>
+</tr>
+<tr>
+<td><code>animalModels</code></td>
+<td>The pool behind the <code>allowAnimalPeds</code> toggle.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configtattooslua">config/tattoos.lua<a class="headerlink" href="#configtattooslua" title="Permanent link">&para;</a></h2>
+<p>The full base-game tattoo catalogue (840 entries, generated) plus hair fades.
+Append custom tattoo DLCs to <code>list</code> — the UI picks them up automatically:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nv">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'my_custom_tattoos'</span><span class="p">,</span><span class="w"> </span><span class="nv">overlay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">male</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'M_Custom_000'</span><span class="p">,</span><span class="w"> </span><span class="nv">female</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'F_Custom_000'</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nv">zone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'ZONE_TORSO'</span><span class="p">,</span><span class="w"> </span><span class="nv">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Custom Piece'</span><span class="w"> </span><span class="p">},</span>
+</code></pre></div>
+<ul>
+<li><code>collection</code> — decoration collection name</li>
+<li><code>overlay</code> — overlay preset per gender; set one gender to <code>''</code> when the pack has no variant for it (it is hidden for that gender)</li>
+<li><code>zone</code> — <code>ZONE_TORSO</code>, <code>ZONE_HEAD</code>, <code>ZONE_LEFT_ARM</code>, <code>ZONE_RIGHT_ARM</code>, <code>ZONE_LEFT_LEG</code>, <code>ZONE_RIGHT_LEG</code></li>
+<li><code>label</code> — display name</li>
+</ul>
+<p><code>hairFades</code> are decorations layered under the hair component, offered in the
+Hair panel.</p>
+<h2 id="shareddefaultslua">shared/defaults.lua<a class="headerlink" href="#shareddefaultslua" title="Permanent link">&para;</a></h2>
+<p>What a freemode ped wears when a slot is "empty": bare arms, no undershirt, the
+no-top torso, underwear, bare feet. The file is keyed by model, then by
+component id:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">[</span><span class="s1">'mp_m_freemode_01'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nv">components</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="p">[</span><span class="s1">'3'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span><span class="w">   </span><span class="c1">-- arms</span>
+<span class="w">            </span><span class="p">[</span><span class="s1">'4'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">61</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span><span class="w">   </span><span class="c1">-- legs</span>
+<span class="w">            </span><span class="p">[</span><span class="s1">'6'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span><span class="w">   </span><span class="c1">-- shoes</span>
+<span class="w">            </span><span class="p">[</span><span class="s1">'8'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span><span class="w">   </span><span class="c1">-- undershirt</span>
+<span class="w">            </span><span class="p">[</span><span class="s1">'11'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">252</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="c1">-- top</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">[</span><span class="s1">'mp_f_freemode_01'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nv">components</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="p">[</span><span class="s1">'3'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span>
+<span class="w">            </span><span class="p">[</span><span class="s1">'4'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span>
+<span class="w">            </span><span class="p">[</span><span class="s1">'6'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span>
+<span class="w">            </span><span class="p">[</span><span class="s1">'8'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span>
+<span class="w">            </span><span class="p">[</span><span class="s1">'11'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">74</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>These are used in four places:</p>
+<ul>
+<li>taking a piece off with a physical-item command (<code>/shirt</code>, <code>/pants</code>, <code>/shoes</code>)
+  swaps that slot to its default and hands the piece over;</li>
+<li>a new character starts wearing exactly these;</li>
+<li>switching model in the editor dresses the new body with them;</li>
+<li>the editor's undress toggles and the studio's body mode use them as the base.</li>
+</ul>
+<p>Slots without an entry (mask, bag, ...) fall back to drawable 0 of the base
+collection, which is "nothing" for those.</p>
+<h3 id="two-ways-to-write-an-entry">Two ways to write an entry<a class="headerlink" href="#two-ways-to-write-an-entry" title="Permanent link">&para;</a></h3>
+<p><code>global = true</code> means the drawable is a global index — the plain number every
+clothing list, the radial menu and the classic screenshot tools use, counted
+across all installed packs. That's the form the file ships with, because the
+well-known bare-body numbers are global ones. They are resolved to the right
+pack on the player's ped at runtime, so they keep working as packs are added.</p>
+<p>An entry can also point at a specific pack with a collection pair, the same
+form the editor and the database use:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s1">'11'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'mp_m_2023_01'</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span>
+</code></pre></div>
+<p>Use whichever you have at hand. The editor shows the collection and local
+index of the worn item in the item grid (<code>mp_m_2023_01</code> · <code>5</code>), so copying an
+item from there is a collection pair; a number from a clothing list is a
+global index and needs <code>global = true</code>.</p>
+<h3 id="example-a-different-bare-top">Example: a different bare top<a class="headerlink" href="#example-a-different-bare-top" title="Permanent link">&para;</a></h3>
+<p>If your server prefers a plain white tee over the bare torso when a shirt comes
+off, change the top entry for that model:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s1">'mp_m_freemode_01'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nv">components</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">[</span><span class="s1">'3'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span><span class="w">    </span><span class="c1">-- arms that match a tee</span>
+<span class="w">        </span><span class="p">[</span><span class="s1">'4'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">61</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">[</span><span class="s1">'6'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">[</span><span class="s1">'8'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">[</span><span class="s1">'11'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">global</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nv">texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span><span class="w">  </span><span class="c1">-- white t-shirt</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">},</span>
+</code></pre></div>
+<p>Restart the resource; there is no migration, the values are read live.</p>
+<h3 id="taking-a-shirt-off-resetwith">Taking a shirt off: <code>resetWith</code><a class="headerlink" href="#taking-a-shirt-off-resetwith" title="Permanent link">&para;</a></h3>
+<p>Most newer packs build the arms into the top itself and pair the top with an
+"invisible" arms drawable (component 3), so the sleeves don't clip. If taking
+the top off only swapped component 11, the invisible arms would stay and the
+player would look like a torso with no arms. The shirt slot therefore carries
+<code>resetWith</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">shirt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'shirt'</span><span class="p">,</span><span class="w"> </span><span class="nv">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Shirt'</span><span class="p">,</span><span class="w"> </span><span class="nv">component</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">resetWith</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">},</span><span class="w">   </span><span class="c1">-- arms, undershirt, decals</span>
+<span class="w">    </span><span class="nv">anim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'clothingtie'</span><span class="p">,</span><span class="w"> </span><span class="nv">clip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'try_tie_negative_a'</span><span class="p">,</span><span class="w"> </span><span class="nv">dur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1200</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</code></pre></div>
+<p>When the shirt comes off, every listed component goes back to its entry in
+<code>shared/defaults.lua</code> (or drawable 0 when there is none, as for decals). The
+values they had ride along in the shirt item's metadata, so putting the shirt
+back on restores the exact arms, gloves, undershirt and decal that were worn
+with it — nothing is lost, and a player who wants gloves on a bare torso just
+picks them again. The list is yours to change: drop <code>10</code> to keep decals showing
+on bare skin, or add <code>resetWith</code> to other slots whose packs have similar
+pairings.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../readme/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Full reference (README)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Full reference (README)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../editor/" class="md-footer__link md-footer__link--next" aria-label="Next: The editor">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                The editor
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Epixx1337" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/2PjtpqdQXP" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.footer", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
