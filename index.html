@@ -46,10 +46,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="stylesheets/epixx.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime">
+    <body dir="ltr" data-md-color-scheme="epixx" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -122,7 +124,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="epixx" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
@@ -132,7 +134,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="lime"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
@@ -349,7 +351,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1976,7 +1980,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2052,54 +2058,62 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+
 
 
   
   
 
 
-<h1 id="epixx-scripts">Epixx Scripts<a class="headerlink" href="#epixx-scripts" title="Permanent link">&para;</a></h1>
-<p>Resources for <a href="https://qbox-project.github.io/">Qbox</a> servers, built on the ox stack. Everything here is developed in the open on <a href="https://github.com/Epixx1337">GitHub</a> and supported through our <a href="https://discord.gg/2PjtpqdQXP">Discord</a>.</p>
+<h1 class="visually-hidden" id="epixx-scripts" style="position:absolute;left:-9999px">Epixx Scripts<a class="headerlink" href="#epixx-scripts" title="Permanent link">&para;</a></h1>
+<div class="epixx-hero">
+<p><img class="wordmark" src="assets/wordmark.png" alt="EPIXX" /></p>
+<p class="tagline">Resources for <a href="https://qbox-project.github.io/">Qbox</a> servers, built on the ox stack.<br>
+Developed in the open — documented here, supported on Discord.</p>
+<p class="buttons">
+<a class="md-button md-button--primary" href="#the-scripts">Browse the scripts</a>
+<a class="md-button" href="https://discord.gg/2PjtpqdQXP">Join the Discord</a>
+<a class="md-button" href="https://github.com/Epixx1337">GitHub</a>
+</p>
+</div>
 <h2 id="the-scripts">The scripts<a class="headerlink" href="#the-scripts" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Script</th>
-<th>What it is</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong><a href="qbx_properties/">qbx_properties</a></strong></td>
-<td>Player housing: apartments, shells and real MLO houses with an in-game realtor job, furniture editor, property market, rent, utilities and police raids</td>
-<td><a href="https://github.com/Epixx1337/qbx_properties">GitHub</a></td>
-</tr>
-<tr>
-<td><strong><a href="qbx_appearance/">qbx_appearance</a></strong></td>
-<td>Appearance system and full illenium-appearance replacement — collection-native storage, screenshot studio, tattoos, outfits</td>
-<td><a href="https://github.com/Epixx1337/qbx_appearance">GitHub</a></td>
-</tr>
-<tr>
-<td><strong><a href="qbx_skills/">qbx_skills</a></strong></td>
-<td>Skill tree progression: specializations, talent points, a live in-game tree editor and stat perks</td>
-<td><a href="https://github.com/Epixx1337/qbx_skills">GitHub</a></td>
-</tr>
-<tr>
-<td><strong><a href="qbx_propplacer/">qbx_propplacer</a></strong></td>
-<td>Scene creator: type a word, place it as a real 3D sign, light it and dress the scene with props</td>
-<td><a href="https://github.com/Epixx1337/qbx_propplacer">GitHub</a></td>
-</tr>
-<tr>
-<td><strong><a href="qbx_core/">qbx_core</a></strong></td>
-<td>Our build of the Qbox core with the multicharacter screen rebuilt as a NUI — scenes, layouts and portraits</td>
-<td><a href="https://github.com/Epixx1337/qbx_core">GitHub</a></td>
-</tr>
-</tbody>
-</table>
-<p>Each section has an <strong>Installation</strong> guide, an <strong>FAQ &amp; troubleshooting</strong> page for the questions we actually get, and the full reference mirrored from the repository — so the deep docs here are always in sync with the code.</p>
+<div class="epixx-cards">
+  <a class="epixx-card" href="qbx_properties/">
+    <div class="card-icon">🏠</div>
+    <div class="card-title">qbx_properties</div>
+    <p class="card-desc">Player housing: apartments, shells and real MLO houses with an in-game realtor job, furniture editor, property market, rent, utilities and police raids.</p>
+  </a>
+  <a class="epixx-card" href="qbx_appearance/">
+    <div class="card-icon">👔</div>
+    <div class="card-title">qbx_appearance</div>
+    <p class="card-desc">Appearance system and full illenium-appearance replacement — collection-native storage that survives game updates, screenshot studio, tattoos, outfits.</p>
+  </a>
+  <a class="epixx-card" href="qbx_skills/">
+    <div class="card-icon">🌳</div>
+    <div class="card-title">qbx_skills</div>
+    <p class="card-desc">Skill tree progression: specializations, talent points, a live in-game tree editor and stat perks your other scripts query through exports.</p>
+  </a>
+  <a class="epixx-card" href="qbx_propplacer/">
+    <div class="card-icon">💡</div>
+    <div class="card-title">qbx_propplacer</div>
+    <p class="card-desc">Scene creator: type a word, place it as a real 3D sign, light it and dress the set with props — gizmo, freecam and snapping included.</p>
+  </a>
+  <a class="epixx-card" href="qbx_core/">
+    <div class="card-icon">🎛️</div>
+    <div class="card-title">qbx_core</div>
+    <p class="card-desc">Our build of the Qbox core with the multicharacter screen rebuilt as a NUI — characters in the world, scenes, five layouts and game-rendered portraits.</p>
+  </a>
+  <a class="epixx-card" href="faq/">
+    <div class="card-icon">❓</div>
+    <div class="card-title">General FAQ</div>
+    <p class="card-desc">Framework requirements, build commands, update safety, where to report bugs — the questions that apply to everything.</p>
+  </a>
+</div>
+
+<p>Each script section has an <strong>Installation</strong> guide, an <strong>FAQ &amp; troubleshooting</strong> page for the questions we actually get, and the full reference mirrored straight from the repository — the deep docs never drift from the code.</p>
 <h2 id="updates">Updates<a class="headerlink" href="#updates" title="Permanent link">&para;</a></h2>
-<p>Every push and release is announced in the <strong>#updates</strong> channel on our Discord, as a changelog with the version, what changed and — read these before updating — <strong>⚠️ Action required</strong> steps (new config keys, SQL files to run, dependency bumps). The <em>Download update</em> button on each changelog grabs that exact version.</p>
+<p>Every push and release is announced in the <strong>#updates</strong> channel on our Discord as a changelog: the version, what changed, and — read these before updating — <strong>⚠️ Action required</strong> steps (new config keys, SQL files to run, dependency bumps). The <em>Download update</em> button on each changelog grabs that exact version.</p>
 <h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
 <ul>
 <li>🐞 <strong>Bug reports</strong> — the <em>bug-reports</em> forum on <a href="https://discord.gg/2PjtpqdQXP">Discord</a>. Follow the pinned template (script, version, description, steps, expected/actual, plus a screenshot or video); the bot checks it and our tooling picks the report up from there.</li>
@@ -2115,8 +2129,13 @@
 
 
 
+  
+  
 
 
+
+
+  
 
 
 
@@ -2141,6 +2160,8 @@
         <footer class="md-footer">
   
     
+      
+        
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
