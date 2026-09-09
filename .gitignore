@@ -1,0 +1,4 @@
+# GitHub can only receive these once gh has the workflow scope (gh auth refresh -s workflow)
+.github/
+site/
+_site/
