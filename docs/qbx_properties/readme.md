@@ -3,7 +3,7 @@ title: Full reference
 ---
 
 !!! info "Mirrored from GitHub"
-    This page mirrors the [qbx_properties README](https://github.com/Epixx1337/qbx_properties#readme) and is refreshed automatically.
+    This page mirrors the [qbx_properties README](https://github.com/Epixx1337/qbx_properties/tree/main#readme) and is refreshed automatically.
 
 # qbx_properties
 
@@ -113,9 +113,9 @@ Walk the building capturing the entrance, receptionist, elevators, floor heights
 - Maintenance: standalone properties owe a recurring ownership fee (a percentage of the price with a floor), auto-charged from the owner's bank, payable by roommates from the tablet, with seizure after too long unpaid
 - Owner-to-player leasing from the tablet's Rent tab: contract periods, the first payment charged on acceptance, prepayable rent, a payment history, roommate permissions for rent and utilities, and eviction notices when the owner ends a lease
 - Job access on commercial and warehouse properties: owners grant a whole job (with a minimum grade) door, stash, furniture or garage access — made for storefronts and depots, residential homes keep personal keys only
-- Furniture layouts: save the current furnishing as a named snapshot, re-apply it later, or hand its share code to a friend so they can import it into their own property (applying pays for the furniture like a fresh purchase)
+- Furniture layouts: save the current furnishing as a named snapshot, re-apply it later, or hand its share code to a friend so they can import it into their own property (applying pays for the furniture like a fresh purchase). A layout fits any property using the same interior, so shells of one model share layouts freely; MLO layouts stay in the property they were saved in, since every MLO is its own building
 - Owners can authorise realtors to sell their occupied property on the market — the proceeds still come to the owner — and every ownership change lands in a sales ledger with the seller's profit
-- Doorbell and doorcam: visitors ring at MLO doors, shell entrances and apartment unit doors; everyone inside gets notified, sees who is outside on the tablet's Doorcam tab, can watch a live camera over the door (multi-door houses cycle between every registered door), and lets them in — teleported inside for shells and apartments, a 10-second door unlock for MLOs. Realtors can also place an exact doorcam with the laser from the Manage tab, which overrides the automatic camera
+- Doorbell and doorcam: visitors ring at MLO doors, shell entrances and apartment unit doors; everyone inside gets notified, sees who is outside on the tablet's Doorcam tab, can watch a live camera over the door (multi-door houses cycle between every registered door), and lets them in — teleported inside for shells and apartments, a 10-second door unlock for MLOs. Realtors can also place an exact doorcam with the laser from the Manage tab, which overrides the automatic camera. Set `doorcam.enabled = false` in `config/shared.lua` to hide the Doorcam tab and the realtor doorcam tools; visitors can still ring and be let in from the property menu
 - Physical keys (optional): doors demand a key item instead of the access list — spares are cut and locks changed from the housing tablet for a fee, a lock change kills every old key, and every sale hands the buyer a fresh key with a new lock ([docs below](#physical-door-keys))
 - Tenants can relocate between buildings, gated by config: free moves at the reception, plus a one-time migration offer on login whenever new buildings open with free rooms
 - Admins can furnish a unit and run `/saveroom` to save it as the default loadout for that room layout — every fresh tenant starts with those pieces already placed and fully editable
@@ -325,6 +325,45 @@ How keys move around:
 
 Enabling this on a live server: every current owner and tenant receives their first key on next login, and anyone who only had access-list rights needs a key handed to them before the door opens for them again.
 
+## Security cameras and doorbells
+
+Both are physical props you place yourself, and both are watched from the **Cameras** tab of the
+housing tablet.
+
+**The doorbell** is fitted to a door rather than configured as a coordinate. Stand by one of your
+own doors and pick *Place doorbell* from the property radial, aim it where you want it and click.
+Aiming at the door leaf itself fixes it to that leaf, so it swings with the door; the placement
+HUD says *Fixes to this door* or *Not on a door* as you aim, so put it on the frame instead if you
+would rather it stayed still. Once fitted it carries its own target to move or remove it, offered
+to anyone the property lets edit furniture. Visitors get a *Ring doorbell* option, and the ring
+shows up in the tablet with the caller's feed.
+
+**Cameras** are ordinary furniture from the Security category, so they are placed, moved, named and
+grouped like anything else. How many a property may hold comes from its size and its security
+upgrade tier. In the feed, `←` and `→` pan the camera: the dome turns on its mount while the
+bracket stays on the wall, and where you leave it is saved, so the camera keeps looking that way
+afterwards. `G` closes the feed.
+
+Give a camera a name with the pen button in the furniture list and the tablet shows that name
+instead of *Camera 2*, which is worth doing once you have more than one.
+
+Everything lives under `security` in `config/shared.lua`:
+
+| Option | What it does |
+| --- | --- |
+| `doorbellModel` / `cameraModel` | props used for the doorbell and the camera |
+| `cameraHeadModel` | the camera's dome, spawned onto the mount and turned by the pan. Setting it to `nil` leaves the camera a single fixed prop |
+| `lens` | per model: `offset` of the viewpoint from the prop origin, `facing` degrees the lens looks relative to the prop's heading, and `pitch`. Move `offset` further out if a prop films its own casing |
+| `doorbellRange` | how close to a door you must stand to fit a doorbell |
+| `cameras` | cameras a property holds before upgrades, keyed by property size, plus `apartment` |
+| `camerasPerTier` | extra cameras each security upgrade tier grants |
+| `pan.limit` | how far a camera turns either way from its mounted heading |
+| `pan.step` | how fast it turns while an arrow is held |
+| `pan.pivot` | how far up the piece the dome sits, so it spins on itself instead of swinging out of its bracket. Only change this alongside a different `cameraHeadModel` |
+
+Replacing either prop means replacing its `lens` entry too, since the viewpoint is measured from
+the prop's own origin.
+
 ## Property photos
 
 Every property carries a photo gallery shown on market cards, listings and the realtor panel. Photos come from two flows:
@@ -376,6 +415,7 @@ Options worth knowing about:
 - `logoutEnabled` (shared) — beds and logout points let players switch character; `false` hides them everywhere.
 - `furnitureShop` (shared) — `false` ignores all furniture prices, so everything places instantly for free and the cart never appears.
 - `furnitureCategories` (client) — icons, labels, ordering and grouping for the furniture catalog. Each category shows as an icon tile with a hover tooltip; `icon` takes any [Font Awesome free](https://fontawesome.com/icons) class (e.g. `'fa-solid fa-couch'`), `order` sorts the row, and `parent` nests a category as a subcategory of another (the bundled walls/arches/stairs/floors sit under a `structure` group). Categories without an entry get a generic icon and their capitalised key.
+- `interactions` (client) — what a wardrobe and the clothing interaction point actually run. `wardrobe` opens the customisation menu and `outfits` the outfit list, each with its own `label` and `icon` for the target option. They ship pointing at illenium-appearance; swap the body of `run` for your own clothing resource's export or event and nothing in the client files needs touching. Add your own entries and point a wardrobe at one with `action = 'yourkey'` in its furniture entry.
 - `furnitureImageSource` (shared) — `'cdn'` lazy-loads the furniture catalog thumbnails from uploaded CDN copies instead of resource files, see "Regenerating catalog images".
 - `apartmentChoice` (shared) — `false` skips the apartment picker at character creation and assigns the first available apartment automatically. A single active building already skips the picker on its own.
 - `freeApartmentMoves` (shared) — `false` locks tenants to their apartment building; the reception refuses switching.
@@ -410,9 +450,17 @@ Options worth knowing about:
 
 `/shellsetup` walks a realtor through every shell that still needs its points (exit, stash, wardrobe, logout) using the laser pointer, and `/shellsetup all` re-runs every shell and IPL. Points are saved to the database and override `config/shell_defaults.lua`.
 
+A shell positioned with the gizmo is the interior itself: entering puts the owner in that shell rather than in a copy, and its furniture, points and doors are stored relative to it, so moving the shell takes the whole home with it. MLO and IPL interiors are fixed in the world and keep world coordinates. Furniture placed in a shell before this was true is converted on the next start, which shows as `anchored N piece(s) of furniture to their shell` in the console.
+
 ## Editor controls
 
-While decorating: `E` toggles between the catalog and the world, **hold `F` to fly the freecam**, `Alt` selects a placed object. With an object held: `T`/`R` switch the gizmo between move and rotate, `L` switches world/local axes, `G` snaps to the ground, `H` snaps to the nearest wall, `N` snaps modular pieces together, `Enter` confirms. `Backspace` exits.
+While decorating: `Tab` hands control between the catalog and the world, **hold `F` to fly the freecam**. In the world the crosshair lights up on whatever piece you are looking at; click it to pick that piece up.
+
+Carrying a piece, it follows where you look: `Scroll` turns it, `R` walks the axis the scroll turns (yaw, pitch, roll), `Ctrl` + `Scroll` turns in coarse steps and `Alt` + `Scroll` in fine ones, `Shift` + `Scroll` raises it or pushes it further away, `G` follows the surface under it, `X` snaps to the grid, `H` lays it flat against whatever you are aiming at, `N` snaps modular pieces together, `Click` puts it down, `Backspace` exits.
+
+Hand a piece to the cursor with `Tab` for the gizmo instead: `T`/`R` switch between move and rotate, `L` switches world/local axes. The grid does not quantise the gizmo, so that is where fine adjustment lives.
+
+In the placed list each piece has a row of buttons: move it, name it, file it into a group, duplicate it, and remove it. A piece that came out of an inventory item offers putting it back instead. Groups are made with **New group**, fold away, and take furniture by dragging a row onto them or through the folder button.
 
 ## Regenerating catalog images
 

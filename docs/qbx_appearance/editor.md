@@ -4,7 +4,7 @@ One editor serves every flow — character creation, clothing stores, barbers,
 tattoo shops, the surgeon, lockers and the admin `/pedmenu`. What differs per
 flow is which sections are unlocked (`shopSections` in `config/client.lua`).
 
-![Clothing browser with collection filter and textures](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/media/editor-clothing.jpg)
+![Clothing browser with collection filter and textures](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/docs/media/editor-clothing.jpg)
 
 ## Layout
 
@@ -19,7 +19,7 @@ flow is which sections are unlocked (`shopSections` in `config/client.lua`).
   poses to check clipping), Flip side (jump to the opposite side for ears,
   back tattoos), Help.
 
-![Spotlight lighting the character](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/media/editor-spotlight.jpg)
+![Spotlight lighting the character](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/docs/media/editor-spotlight.jpg)
 
 ## Camera
 
@@ -41,23 +41,28 @@ so a stripped state can never be saved or leave the editor.
 
 ### DNA
 
-![Heritage grids built from generated face thumbnails](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/media/editor-heritage.jpg)
+![Heritage grids built from generated face thumbnails](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/docs/media/editor-heritage.jpg)
 
 Heritage picks the two parent faces from image grids (46 rendered heads) with
 blend sliders; skin tone and eye color use rendered swatch grids as well. Face
 features are shaped on drag-pads instead of sliders — drag horizontally and
 vertically to set two features at once.
 
+With `creation.randomizeFeatures` on (the default) every new character arrives
+with a random face rather than the stock ped: parents, skin tone, features,
+overlays, eye color and hair are rolled from natural-looking ranges, so two
+players who skip customization still don't look alike.
+
 ### Ped models
 
-![Model picker with generated ped portraits](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/media/editor-ped-models.jpg)
+![Model picker with generated ped portraits](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/docs/media/editor-ped-models.jpg)
 
 Visible when the ped policy allows more than the freemode models (or the
 player has a `pedAccess` grant). Portraits come from `/screenshotpeds`.
 
 ### Hair & Face
 
-![Hair styles, colors, highlight and fades](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/media/editor-hair.jpg)
+![Hair styles, colors, highlight and fades](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/docs/media/editor-hair.jpg)
 
 Hair styles as rendered thumbnails with color, highlight and fade selection
 (fades are decorations layered under the hair), plus every head overlay —
@@ -76,7 +81,7 @@ on the spot.
 
 ### Tattoos
 
-![Tattoo zones with layering and per-tattoo opacity](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/media/editor-tattoos.jpg)
+![Tattoo zones with layering and per-tattoo opacity](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/docs/media/editor-tattoos.jpg)
 
 Zones follow the badges (torso, head, arms, legs). Hovering an entry previews
 it; clicking toggles it on or off. Worn tattoos are grouped by body zone —
@@ -84,7 +89,7 @@ each group header jumps the camera to that zone — and every tattoo has an
 opacity slider plus layer ordering within its zone, so stacked pieces build
 sleeve effects.
 
-![Layered tattoos across zones](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/media/editor-tattoo-layers.jpg)
+![Layered tattoos across zones](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/docs/media/editor-tattoo-layers.jpg)
 
 ### Outfits
 

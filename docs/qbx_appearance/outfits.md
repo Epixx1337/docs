@@ -1,6 +1,6 @@
 # Outfits
 
-![The outfits panel with a job locker](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/media/editor-outfits.jpg)
+![The outfits panel with a job locker](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/docs/media/editor-outfits.jpg)
 
 ## Personal outfits
 

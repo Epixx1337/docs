@@ -3,7 +3,7 @@ title: Full reference
 ---
 
 !!! info "Mirrored from GitHub"
-    This page mirrors the [qbx_appearance README](https://github.com/Epixx1337/qbx_appearance#readme) and is refreshed automatically.
+    This page mirrors the [qbx_appearance README](https://github.com/Epixx1337/qbx_appearance/tree/main#readme) and is refreshed automatically.
 
 # qbx_appearance
 
@@ -27,7 +27,8 @@ barbers, tattoo shops, the surgeon, lockers and the admin `/pedmenu`. Category
 diamonds float around your character, the camera orbits and zooms toward the
 body part under your cursor, and every drawable shows as a real screenshot of
 that item. Heritage, skin tone and eye color are picked from image grids;
-face features are shaped on drag-pads instead of 40 sliders.
+face features are shaped on drag-pads instead of 40 sliders. New characters
+start from a randomized face, not the stock ped.
 
 ![Clothing browser](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/docs/media/editor-clothing.jpg)
 

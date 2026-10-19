@@ -68,6 +68,7 @@ re-equips it. Items refuse to equip on the other body type (drawable indexes dif
 | option | meaning |
 | --- | --- |
 | `freemodeOnly` | Character creation hides the ped tab and derives the model from multichar's `charinfo.gender`. |
+| `randomizeFeatures` | New characters open the creator with a random face instead of the stock ped: heritage parents and mixes, skin tone, all twenty face features, eyebrows, beard or makeup and the other overlays, eye color, hair and hair color, all rolled from natural-looking ranges. Clothing is untouched and everything stays editable. `false` starts from the plain default ped. |
 | `defaultMale` / `defaultFemale` | Models used per gender. |
 
 ## config/client.lua

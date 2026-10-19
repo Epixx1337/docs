@@ -1,5 +1,5 @@
 site_name: Epixx Scripts
-site_description: Documentation for the Epixx Qbox scripts — qbx_properties, qbx_appearance, qbx_skills, qbx_propplacer and our qbx_core build.
+site_description: Documentation for the Epixx Qbox scripts — qbx_properties, qbx_appearance, qbx_skills, qbx_propplacer, qbx_idcard and our qbx_core build.
 site_url: https://epixx1337.github.io/docs/
 repo_url: https://github.com/Epixx1337
 repo_name: Epixx1337
@@ -98,6 +98,14 @@ nav:
       - Installation: qbx_propplacer/install.md
       - FAQ & troubleshooting: qbx_propplacer/faq.md
       - Full reference (README): qbx_propplacer/readme.md
+  - qbx_idcard:
+      - Overview: qbx_idcard/index.md
+      - Installation: qbx_idcard/install.md
+      - FAQ & troubleshooting: qbx_idcard/faq.md
+      - Full reference (README): qbx_idcard/readme.md
+      - The card designer: qbx_idcard/designer.md
+      - Badges: qbx_idcard/badges.md
+      - Mugshot uploads: qbx_idcard/cdn.md
   - qbx_core:
       - Overview: qbx_core/index.md
       - Installation: qbx_core/install.md

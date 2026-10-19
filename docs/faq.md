@@ -18,13 +18,14 @@ No — every script ships its NUI prebuilt. You only rebuild after changing the 
 | qbx_appearance | `cd web && bun i && bun run build` |
 | qbx_skills | `cd web && bun install && bun run build` |
 | qbx_propplacer | `cd web && bun install && bun run build` |
+| qbx_idcard | `cd web && bun install && bun run build` |
 | qbx_core | `cd web && pnpm install && pnpm build` |
 
 Any npm-compatible tool works if you don't use bun/pnpm.
 
 ## Do I have to run SQL files by hand?
 
-Usually not — qbx_properties, qbx_skills and qbx_propplacer create and migrate their tables automatically on first start. Run the shipped `.sql` files manually only when your database user is not allowed to `CREATE`/`ALTER`, or when a changelog explicitly says so (qbx_appearance's `sql/install.sql` is the one that is always manual).
+Usually not — qbx_properties, qbx_skills, qbx_propplacer and qbx_idcard create and migrate their tables automatically on first start. Run the shipped `.sql` files manually only when your database user is not allowed to `CREATE`/`ALTER`, or when a changelog explicitly says so (qbx_appearance's `sql/install.sql` is the one that is always manual).
 
 ## In what order do resources need to start?
 

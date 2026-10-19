@@ -88,7 +88,7 @@ Every ownership change — market sales, auctions, accepted offers, player-to-pl
 
 ## Server exports
 
-Beyond the phone API in [phone-integrations.md](https://github.com/Epixx1337/qbx_properties/blob/main/phone-integrations.md):
+Beyond the phone API in [phone-integrations.md](phone-integrations.md):
 
 | Export | Returns |
 | --- | --- |

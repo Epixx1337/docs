@@ -3,7 +3,7 @@ title: Full reference
 ---
 
 !!! info "Mirrored from GitHub"
-    This page mirrors the [qbx_core README](https://github.com/Epixx1337/qbx_core#readme) and is refreshed automatically.
+    This page mirrors the [qbx_core README](https://github.com/Epixx1337/qbx_core/tree/main#readme) and is refreshed automatically.
 
 ![image](https://raw.githubusercontent.com/Epixx1337/qbx_core/main/.github/images/banner.jpg)
 
@@ -82,9 +82,23 @@ scenes = {
 
 `camCoords` is where the camera sits, `w` is its heading. Each `spawnPoints` entry is where one character stands, slot 1 on the first point, slot 2 on the second and so on. Give every scene at least as many points as characters your players can have (`defaultNumberOfCharacters` and `playersNumberOfCharacters` in `config/server.lua`), otherwise the extra characters share a point. The `dock` and `cards` layouts read left to right, so lay the points out that way as seen from the camera.
 
+A spawn point can also be a table, which poses the character standing on it:
+
+```lua
+spawnPoints = {
+    vec4(969.76, 70.77, 116.18, 295.61),
+    { coords = vec4(969.43, 71.67, 116.18, 285.61), scenario = 'WORLD_HUMAN_AA_COFFEE' },
+    { coords = vec4(969.25, 72.61, 116.18, 275.61), sync = { dict = 'mp_ped_interaction', clip = 'hugs_guy_a', partner = 4, partnerClip = 'hugs_guy_b' } },
+    { coords = vec4(969.24, 73.57, 116.18, 265.61), scenario = 'WORLD_HUMAN_STAND_MOBILE' },
+    { coords = vec4(969.40, 74.51, 116.18, 255.61), anim = { dict = 'anim@heists@heist_corona@single_team', clip = 'single_team_loop_boss' } },
+}
+```
+
+`scenario` starts an in-place scenario and brings its own prop where the game has one, like the coffee cup above. `anim` plays a clip from a dictionary, `flag` defaults to 1 so it loops. `sync` runs a synchronised scene between this character and the one in `partner`, with the point as the scene origin, so the two line up on their own. It only plays when both slots have a character, otherwise each stands on its own point with its own pose. `prop = { model, bone, pos, rot }` attaches an object to the ped, the bone defaults to the right hand. Props, animations and scenes are cleaned up when the scene changes or the player spawns in.
+
 ## Registration
 
-Creating a character opens a form in the same style: name, nationality (limited to `data/nationalities.lua` when `limitNationalities` is on), sex and a date picker bound by `dateMin` and `dateMax`. The same word and profanity checks as before run on the client before the server callback is hit.
+Creating a character opens a form in the same style: name, nationality (limited to `data/nationalities.lua` when `limitNationalities` is on, with `fullNationalityList` showing the whole list under the field instead of the closest matches), sex and a date picker bound by `dateMin` and `dateMax`. The same word and profanity checks as before run on the client before the server callback is hit.
 
 ![registration](https://raw.githubusercontent.com/Epixx1337/qbx_core/main/.github/images/multichar/registration.jpg)
 

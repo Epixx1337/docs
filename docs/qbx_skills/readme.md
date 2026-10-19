@@ -3,7 +3,7 @@ title: Full reference
 ---
 
 !!! info "Mirrored from GitHub"
-    This page mirrors the [qbx_skills README](https://github.com/Epixx1337/qbx_skills#readme) and is refreshed automatically.
+    This page mirrors the [qbx_skills README](https://github.com/Epixx1337/qbx_skills/tree/main#readme) and is refreshed automatically.
 
 # qbx_skills
 
@@ -185,7 +185,7 @@ and randol_medical are supported out of the box, both auto-detected; for anythin
 `bridge/custom.lua`, set your resource name and hook its revive/respawn events. Worked
 randol_medical examples — the health walk-through and an EMS tree fed from its open
 `PayForRevive`/`PayForHeal` hooks — are in
-[docs/integration.md](https://github.com/Epixx1337/qbx_skills/blob/main/docs/integration.md#medical-script-bridge).
+[docs/integration.md](integration.md#medical-script-bridge).
 
 ## Integrating
 

@@ -5,7 +5,7 @@ faces, skin tones, eye colors and ped portraits. It runs entirely in-game on a
 spawned mannequin — the player is hidden, made invincible and restored
 untouched afterwards.
 
-![Batch run against the green backdrop](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/media/studio-batch.png)
+![Batch run against the green backdrop](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/docs/media/studio-batch.png)
 
 ## Commands
 
@@ -33,7 +33,7 @@ screenshotters produce. The editor hides those aliases too.
 
 ## The studio panel
 
-![Manual mode with the photo frame and framing presets](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/media/studio-backdrop.png)
+![Manual mode with the photo frame and framing presets](https://raw.githubusercontent.com/Epixx1337/qbx_appearance/main/docs/media/studio-backdrop.png)
 
 - **Pause / Resume / Back / Next / jump-to-category** — navigate the work list.
 - **×2** — halves the settle waits for faster batches.

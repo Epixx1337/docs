@@ -42,6 +42,11 @@ Developed in the open — documented here, supported on Discord.</p>
     <div class="card-title">qbx_propplacer</div>
     <p class="card-desc">Scene creator: type a word, place it as a real 3D sign, light it and dress the set with props — gizmo, freecam and snapping included.</p>
   </a>
+  <a class="epixx-card" href="qbx_idcard/">
+    <div class="card-icon">🪪</div>
+    <div class="card-title">qbx_idcard</div>
+    <p class="card-desc">ID cards, licenses and police badges with an in-game card designer — lay out every card yourself, shown in hand to the closest player.</p>
+  </a>
   <a class="epixx-card" href="qbx_core/">
     <div class="card-icon">🎛️</div>
     <div class="card-title">qbx_core</div>

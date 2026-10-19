@@ -50,6 +50,16 @@
 - [FAQ & troubleshooting](qbx_propplacer/faq.md)
 - [Full reference (README)](qbx_propplacer/readme.md)
 
+## qbx_idcard
+
+- [Overview](qbx_idcard/index.md)
+- [Installation](qbx_idcard/install.md)
+- [FAQ & troubleshooting](qbx_idcard/faq.md)
+- [Full reference (README)](qbx_idcard/readme.md)
+- [The card designer](qbx_idcard/designer.md)
+- [Badges](qbx_idcard/badges.md)
+- [Mugshot uploads](qbx_idcard/cdn.md)
+
 ## qbx_core
 
 - [Overview](qbx_core/index.md)

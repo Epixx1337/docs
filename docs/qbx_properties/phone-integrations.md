@@ -161,7 +161,7 @@ For the lock and key capabilities, wire the bridge's capability functions to the
 
 ## Other phones and apps
 
-Any phone with custom apps can also embed the full housing market UI as an app instead of (or next to) a home app — see [third-party-ui.md](https://github.com/Epixx1337/qbx_properties/blob/main/third-party-ui.md) for the `?app=housing` embed URL, which handles bids and purchases with no extra wiring.
+Any phone with custom apps can also embed the full housing market UI as an app instead of (or next to) a home app — see [third-party-ui.md](third-party-ui.md) for the `?app=housing` embed URL, which handles bids and purchases with no extra wiring.
 
 ## Security notes
 

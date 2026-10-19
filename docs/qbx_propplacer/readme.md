@@ -3,7 +3,7 @@ title: Full reference
 ---
 
 !!! info "Mirrored from GitHub"
-    This page mirrors the [qbx_propplacer README](https://github.com/Epixx1337/qbx_propplacer#readme) and is refreshed automatically.
+    This page mirrors the [qbx_propplacer README](https://github.com/Epixx1337/qbx_propplacer/tree/main#readme) and is refreshed automatically.
 
 # qbx_propplacer
 
