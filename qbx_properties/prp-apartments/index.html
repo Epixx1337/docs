@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Documentation for the Epixx Qbox scripts — qbx_properties, qbx_appearance, qbx_skills, qbx_propplacer and our qbx_core build.">
+        <meta name="description" content="Documentation for the Epixx Qbox scripts — qbx_properties, qbx_appearance, qbx_skills, qbx_propplacer, qbx_idcard and our qbx_core build.">
       
       
       
@@ -315,6 +315,26 @@
   
   
   qbx_propplacer
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../qbx_idcard/" class="md-tabs__link">
+          
+  
+  
+  qbx_idcard
 
         </a>
       </li>
@@ -1853,7 +1873,7 @@
   <span class="md-ellipsis">
     
   
-    qbx_core
+    qbx_idcard
   
 
     
@@ -1866,6 +1886,259 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    qbx_idcard
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_idcard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_idcard/install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_idcard/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ & troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_idcard/readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full reference (README)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_idcard/designer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The card designer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_idcard/badges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Badges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_idcard/cdn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mugshot uploads
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    qbx_core
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2145,21 +2418,42 @@
 <span class="w">    </span><span class="kr">end</span>
 <span class="kr">end</span><span class="p">)</span>
 </code></pre></div>
-<p>Then in <code>openElevatorMenu</code>, swap the <code>LocalPlayer.state.apartment</code> block for:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">isMine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">myUnit</span>
-<span class="w">    </span><span class="ow">and</span><span class="w"> </span><span class="nv">myUnit</span><span class="p">.</span><span class="py">building</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">qbxBuildingKeys</span><span class="p">[</span><span class="nv">elevator</span><span class="p">]</span>
-<span class="w">    </span><span class="ow">and</span><span class="w"> </span><span class="nv">myUnit</span><span class="p">.</span><span class="py">floor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nf">getFloorNumber</span><span class="p">(</span><span class="nv">floor</span><span class="p">.</span><span class="py">floor</span><span class="p">)</span>
+<p>Then replace the <strong>entire</strong> <code>openElevatorMenu</code> function with this version — do not copy only the inner <code>isMine</code>/<code>floorOptions</code> lines, the surrounding <code>for floorIndex, floor in ipairs(...)</code> loop must stay intact or the file will fail to load:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">openElevatorMenu</span><span class="p">(</span><span class="nv">elevator</span><span class="p">,</span><span class="w"> </span><span class="nv">index</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">elevatorData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">apartments</span><span class="p">[</span><span class="nv">elevator</span><span class="p">]</span>
 
-<span class="nv">floorOptions</span><span class="p">[</span><span class="o">#</span><span class="nv">floorOptions</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nv">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">locale</span><span class="p">(</span><span class="s2">"FLOOR"</span><span class="p">)</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="s2">" - "</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nf">getFloorLabel</span><span class="p">(</span><span class="nv">floor</span><span class="p">.</span><span class="py">floor</span><span class="p">)</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="p">(</span><span class="nv">isMine</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="s2">" "</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nf">locale</span><span class="p">(</span><span class="s2">"YOUR_ROOM"</span><span class="p">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="s2">""</span><span class="p">),</span>
-<span class="w">    </span><span class="nv">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">isCurrent</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nf">locale</span><span class="p">(</span><span class="s2">"CURRENTLY_ON_THIS_FLOOR"</span><span class="p">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="p">(</span><span class="nv">isMine</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">myUnit</span><span class="p">.</span><span class="py">label</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="kc">nil</span><span class="p">),</span>
-<span class="w">    </span><span class="nv">icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">isMine</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="s2">"house"</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="s2">"elevator"</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">iconColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">isMine</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="s2">"#40c057"</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">onSelect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
-<span class="w">        </span><span class="nf">useElevator</span><span class="p">(</span><span class="nv">floor</span><span class="p">.</span><span class="py">location</span><span class="p">,</span><span class="w"> </span><span class="nv">floor</span><span class="p">.</span><span class="py">heading</span><span class="p">)</span>
-<span class="w">    </span><span class="kr">end</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">disabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">isCurrent</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="nv">elevatorData</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="kr">return</span>
+<span class="w">    </span><span class="kr">end</span>
+
+<span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">floorOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="w">    </span><span class="kr">for</span><span class="w"> </span><span class="nv">floorIndex</span><span class="p">,</span><span class="w"> </span><span class="nv">floor</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">elevatorData</span><span class="p">.</span><span class="py">floors</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">        </span><span class="kd">local</span><span class="w"> </span><span class="nv">isCurrent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">floorIndex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">index</span>
+<span class="w">        </span><span class="kd">local</span><span class="w"> </span><span class="nv">isMine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">myUnit</span>
+<span class="w">            </span><span class="ow">and</span><span class="w"> </span><span class="nv">myUnit</span><span class="p">.</span><span class="py">building</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">qbxBuildingKeys</span><span class="p">[</span><span class="nv">elevator</span><span class="p">]</span>
+<span class="w">            </span><span class="ow">and</span><span class="w"> </span><span class="nv">myUnit</span><span class="p">.</span><span class="py">floor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nf">getFloorNumber</span><span class="p">(</span><span class="nv">floor</span><span class="p">.</span><span class="py">floor</span><span class="p">)</span>
+
+<span class="w">        </span><span class="nv">floorOptions</span><span class="p">[</span><span class="o">#</span><span class="nv">floorOptions</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nv">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">locale</span><span class="p">(</span><span class="s2">"FLOOR"</span><span class="p">)</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="s2">" - "</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nf">getFloorLabel</span><span class="p">(</span><span class="nv">floor</span><span class="p">.</span><span class="py">floor</span><span class="p">)</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="p">(</span><span class="nv">isMine</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="s2">" "</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nf">locale</span><span class="p">(</span><span class="s2">"YOUR_ROOM"</span><span class="p">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="s2">""</span><span class="p">),</span>
+<span class="w">            </span><span class="nv">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">isCurrent</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nf">locale</span><span class="p">(</span><span class="s2">"CURRENTLY_ON_THIS_FLOOR"</span><span class="p">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="p">(</span><span class="nv">isMine</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">myUnit</span><span class="p">.</span><span class="py">label</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="kc">nil</span><span class="p">),</span>
+<span class="w">            </span><span class="nv">icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">isMine</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="s2">"house"</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="s2">"elevator"</span><span class="p">,</span>
+<span class="w">            </span><span class="nv">iconColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">isMine</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="s2">"#40c057"</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span>
+<span class="w">            </span><span class="nv">onSelect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
+<span class="w">                </span><span class="nf">useElevator</span><span class="p">(</span><span class="nv">floor</span><span class="p">.</span><span class="py">location</span><span class="p">,</span><span class="w"> </span><span class="nv">floor</span><span class="p">.</span><span class="py">heading</span><span class="p">)</span>
+<span class="w">            </span><span class="kr">end</span><span class="p">,</span>
+<span class="w">            </span><span class="nv">disabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">isCurrent</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="kr">end</span>
+
+<span class="w">    </span><span class="nv">lib</span><span class="p">.</span><span class="nf">registerContext</span><span class="p">({</span>
+<span class="w">        </span><span class="nv">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"elevator_menu_"</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">elevator</span><span class="p">,</span>
+<span class="w">        </span><span class="nv">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">getElevatorLabel</span><span class="p">(</span><span class="nv">elevatorData</span><span class="p">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nf">locale</span><span class="p">(</span><span class="s2">"ELEVATOR"</span><span class="p">),</span>
+<span class="w">        </span><span class="nv">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">floorOptions</span>
+<span class="w">    </span><span class="p">})</span>
+
+<span class="w">    </span><span class="nv">lib</span><span class="p">.</span><span class="nf">showContext</span><span class="p">(</span><span class="s2">"elevator_menu_"</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">elevator</span><span class="p">)</span>
+<span class="kr">end</span>
 </code></pre></div>
 <p><code>getMyUnit</code> returns <code>{ building, floor, room, label }</code> for the unit the player owns, so the elevator shows the floor with a green house icon and the unit name underneath. The Wiwang map resource's optional <code>elevators.lua</code> uses the same export the same way.</p>
 <h2 id="migrating-existing-tenants">Migrating existing tenants<a class="headerlink" href="#migrating-existing-tenants" title="Permanent link">&para;</a></h2>

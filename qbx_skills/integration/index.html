@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Documentation for the Epixx Qbox scripts — qbx_properties, qbx_appearance, qbx_skills, qbx_propplacer and our qbx_core build.">
+        <meta name="description" content="Documentation for the Epixx Qbox scripts — qbx_properties, qbx_appearance, qbx_skills, qbx_propplacer, qbx_idcard and our qbx_core build.">
       
       
       
@@ -315,6 +315,26 @@
   
   
   qbx_propplacer
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../qbx_idcard/" class="md-tabs__link">
+          
+  
+  
+  qbx_idcard
 
         </a>
       </li>
@@ -2064,7 +2084,7 @@
   <span class="md-ellipsis">
     
   
-    qbx_core
+    qbx_idcard
   
 
     
@@ -2077,6 +2097,259 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    qbx_idcard
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_idcard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_idcard/install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_idcard/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ & troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_idcard/readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full reference (README)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_idcard/designer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The card designer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_idcard/badges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Badges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qbx_idcard/cdn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mugshot uploads
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    qbx_core
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2777,8 +3050,8 @@ so all of them ship enabled and only the matching one does anything:</p>
 </tbody>
 </table>
 <p><code>ReapplyStats(fullHeal, settleMs)</code> takes two arguments. <code>fullHeal = true</code> also fills health up
-to the boosted maximum: medical scripts heal to their own idea of "full" — 200 game units — so
-without it a revived player with Thick Skin would stand up at 200/205 instead of full. Pass it
+to the boosted maximum, so a revived player with Thick Skin stands up at 205/205 instead of at
+whatever value the medical script wrote. Pass it
 on revive, respawn and check-in; leave it off for anything that must keep the current health,
 like randol_medical's persisted health restore on load. <code>settleMs</code> keeps reapplying every
 500 ms for that long — medical scripts write health after their own fades and animations, at
@@ -2802,8 +3075,7 @@ do, so the perks are not reapplied twice:</p>
 <span class="kr">end</span><span class="p">)</span>
 </code></pre></div>
 <p>The timing is the same either way: <code>onRevive</code> fires before randol writes its health, which
-is why the settle window stays. Only randol itself could remove the need for it, by healing
-to <code>GetEntityMaxHealth(ped)</code> instead of 200.</p>
+is why the settle window stays.</p>
 <h4 id="example-more-health-with-randol_medical">Example: more health with randol_medical<a class="headerlink" href="#example-more-health-with-randol_medical" title="Permanent link">&para;</a></h4>
 <p>Nothing is configured inside randol_medical. The extra health comes from the tree:</p>
 <ol>
@@ -2814,8 +3086,8 @@ to <code>GetEntityMaxHealth(ped)</code> instead of 200.</p>
    to 205) and publishes <code>{ maxHealth = 205, ... }</code> on the <code>qbx_skills_stats</code> statebag. Nothing
    heals: the player keeps their current health and grows into the new room through normal
    healing. Losing the perk (switching tree) lowers the cap and clamps health to it.</li>
-<li>randol_medical revives, respawns or checks the player in → it heals them to its own full
-   (200) somewhere during its fade → <code>bridge/randol_medical.lua</code> runs <code>ReapplyStats(true, 4000)</code>,
+<li>randol_medical revives, respawns or checks the player in → it writes health somewhere
+   during its fade → <code>bridge/randol_medical.lua</code> runs <code>ReapplyStats(true, 4000)</code>,
    which keeps restoring the 205 maximum and filling health to it for four seconds, so
    whenever randol's write lands, the last word is 205/205. On relog, randol restores the
    player's persisted health and armour ~2 s after load; the bridge settles the maximum for
@@ -2827,16 +3099,23 @@ to <code>GetEntityMaxHealth(ped)</code> instead of 200.</p>
 </ol>
 <p>The same walk-through applies to <code>max_armour</code> (randol persists armour too) and, without any
 medical involvement, to <code>stamina</code>.</p>
-<p><strong>The cap you cannot see.</strong> randol_medical's revive and check-in write health to a literal
-200 inside its escrowed code — a revived player with a 215 maximum shows <code>200/215</code> until the
-bridge fills them, which is exactly why the bridge treats revive and check-in as full heals.
-No readable config controls it. Its heal items and EMS heals may carry the same constant:
-test it once by using a bandage at <code>200/215</code> — if health rises above 200 randol clamps to
-the ped's real maximum and every heal already benefits from the perk; if it stays at 200,
-randol clamps at 200 and only revive/check-in reach the boosted value until the author swaps
-the constant for <code>GetEntityMaxHealth(ped)</code>, a one-line change worth requesting. qbx_skills
-never heals on its own: outside a bridge's short settle window after a heal event, no code
-here writes health.</p>
+<p><strong>Two max-health natives, one real ceiling.</strong> <code>SetEntityMaxHealth</code> and <code>SetPedMaxHealth</code> write
+different fields, and a player ped's health is clamped against the <code>SetPedMaxHealth</code> one while
+<code>GetEntityMaxHealth</code> reads back the other. Raising only the first is what produces a confusing
+<code>200/215</code>: the bar claims 215, but nothing can push health past the untouched 200 ceiling — not
+a heal item, not a revive, not qbx_skills. Writing both is the whole fix, and it has nothing to
+do with the medical script; the same trap catches any resource that raises max health. Confirm
+it in a few seconds with a test command:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">RegisterCommand</span><span class="p">(</span><span class="s1">'maxhealth'</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
+<span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">ped</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">cache</span><span class="p">.</span><span class="py">ped</span>
+<span class="w">    </span><span class="nf">SetEntityMaxHealth</span><span class="p">(</span><span class="nv">ped</span><span class="p">,</span><span class="w"> </span><span class="mi">215</span><span class="p">)</span>
+<span class="w">    </span><span class="nf">SetPedMaxHealth</span><span class="p">(</span><span class="nv">ped</span><span class="p">,</span><span class="w"> </span><span class="mi">215</span><span class="p">)</span><span class="w"> </span><span class="c1">-- the one that actually gates SetEntityHealth on a player ped</span>
+<span class="w">    </span><span class="nf">SetEntityHealth</span><span class="p">(</span><span class="nv">ped</span><span class="p">,</span><span class="w"> </span><span class="mi">215</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">((</span><span class="s1">'Health: %d / %d'</span><span class="p">):</span><span class="nf">format</span><span class="p">(</span><span class="nf">GetEntityHealth</span><span class="p">(</span><span class="nv">ped</span><span class="p">),</span><span class="w"> </span><span class="nf">GetEntityMaxHealth</span><span class="p">(</span><span class="nv">ped</span><span class="p">)))</span>
+<span class="kr">end</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span>
+</code></pre></div>
+<p>qbx_skills never heals on its own: outside a bridge's short settle window after a heal event,
+no code here writes health.</p>
 <h4 id="example-an-ems-tree-on-randol_medicals-open-handlers">Example: an EMS tree on randol_medical's open handlers<a class="headerlink" href="#example-an-ems-tree-on-randol_medicals-open-handlers" title="Permanent link">&para;</a></h4>
 <p>randol_medical ships its integration points unencrypted in <code>client/cl_open.lua</code>,
 <code>server/sv_open.lua</code> and <code>shared.lua</code>, and every one of them is a place qbx_skills can plug

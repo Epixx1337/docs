@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Documentation for the Epixx Qbox scripts — qbx_properties, qbx_appearance, qbx_skills, qbx_propplacer and our qbx_core build.">
+        <meta name="description" content="Documentation for the Epixx Qbox scripts — qbx_properties, qbx_appearance, qbx_skills, qbx_propplacer, qbx_idcard and our qbx_core build.">
       
       
       
@@ -315,6 +315,26 @@
   
   
   qbx_propplacer
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../qbx_idcard/" class="md-tabs__link">
+          
+  
+  
+  qbx_idcard
 
         </a>
       </li>
@@ -1864,7 +1884,7 @@
   <span class="md-ellipsis">
     
   
-    qbx_core
+    qbx_idcard
   
 
     
@@ -1877,6 +1897,259 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    qbx_idcard
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qbx_idcard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qbx_idcard/install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qbx_idcard/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ & troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qbx_idcard/readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full reference (README)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qbx_idcard/designer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The card designer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qbx_idcard/badges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Badges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qbx_idcard/cdn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mugshot uploads
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    qbx_core
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2160,6 +2433,10 @@
 <td><code>cd web &amp;&amp; bun install &amp;&amp; bun run build</code></td>
 </tr>
 <tr>
+<td>qbx_idcard</td>
+<td><code>cd web &amp;&amp; bun install &amp;&amp; bun run build</code></td>
+</tr>
+<tr>
 <td>qbx_core</td>
 <td><code>cd web &amp;&amp; pnpm install &amp;&amp; pnpm build</code></td>
 </tr>
@@ -2167,7 +2444,7 @@
 </table>
 <p>Any npm-compatible tool works if you don't use bun/pnpm.</p>
 <h2 id="do-i-have-to-run-sql-files-by-hand">Do I have to run SQL files by hand?<a class="headerlink" href="#do-i-have-to-run-sql-files-by-hand" title="Permanent link">&para;</a></h2>
-<p>Usually not — qbx_properties, qbx_skills and qbx_propplacer create and migrate their tables automatically on first start. Run the shipped <code>.sql</code> files manually only when your database user is not allowed to <code>CREATE</code>/<code>ALTER</code>, or when a changelog explicitly says so (qbx_appearance's <code>sql/install.sql</code> is the one that is always manual).</p>
+<p>Usually not — qbx_properties, qbx_skills, qbx_propplacer and qbx_idcard create and migrate their tables automatically on first start. Run the shipped <code>.sql</code> files manually only when your database user is not allowed to <code>CREATE</code>/<code>ALTER</code>, or when a changelog explicitly says so (qbx_appearance's <code>sql/install.sql</code> is the one that is always manual).</p>
 <h2 id="in-what-order-do-resources-need-to-start">In what order do resources need to start?<a class="headerlink" href="#in-what-order-do-resources-need-to-start" title="Permanent link">&para;</a></h2>
 <p>Dependencies first, always: <code>oxmysql</code>, <code>ox_lib</code> (and <code>ox_inventory</code> / <code>ox_target</code> / <code>ox_doorlock</code> where used), then <code>qbx_core</code>, then the script. If you keep the scripts inside a <code>[qbx]</code> folder, one <code>ensure [qbx]</code> after the ox stack covers it.</p>
 <h2 id="how-do-i-update-safely">How do I update safely?<a class="headerlink" href="#how-do-i-update-safely" title="Permanent link">&para;</a></h2>
