@@ -1,6 +1,6 @@
 # Epixx Scripts — documentation
 
-Source of the docs site at **https://epixx1337.github.io/docs/** — documentation, installation guides and FAQs for the Epixx Qbox scripts (qbx_properties, qbx_appearance, qbx_skills, qbx_propplacer, qbx_idcard and our qbx_core build).
+Source of the docs site at **https://epixx1337.github.io/docs/** — documentation, installation guides and FAQs for the Epixx Qbox scripts (qbx_properties, qbx_appearance, qbx_skills, qbx_propplacer, qbx_idcard, qbx_phone and our qbx_core build).
 
 ## How it works
 

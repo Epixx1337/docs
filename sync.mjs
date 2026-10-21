@@ -4,7 +4,7 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 
 const OWNER = 'Epixx1337';
-const REPOS = ['qbx_propplacer', 'qbx_appearance', 'qbx_properties', 'qbx_skills', 'qbx_core', 'qbx_idcard'];
+const REPOS = ['qbx_propplacer', 'qbx_appearance', 'qbx_properties', 'qbx_skills', 'qbx_core', 'qbx_idcard', 'qbx_phone'];
 // Repos documented from a branch other than main (qbx_idcard's main tracks upstream Qbox)
 const BRANCHES = { qbx_idcard: 'card-designer' };
 const branchOf = repo => BRANCHES[repo] ?? 'main';

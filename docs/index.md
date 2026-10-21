@@ -47,6 +47,11 @@ Developed in the open — documented here, supported on Discord.</p>
     <div class="card-title">qbx_idcard</div>
     <p class="card-desc">ID cards, licenses and police badges with an in-game card designer — lay out every card yourself, shown in hand to the closest player.</p>
   </a>
+  <a class="epixx-card" href="qbx_phone/">
+    <div class="card-icon">📱</div>
+    <div class="card-title">qbx_phone</div>
+    <p class="card-desc">Duck-themed npwd replacement — a flip phone that unfolds into a tablet, group calls, texting, video calls, SIM cards, cell towers and Wi-Fi.</p>
+  </a>
   <a class="epixx-card" href="qbx_core/">
     <div class="card-icon">🎛️</div>
     <div class="card-title">qbx_core</div>

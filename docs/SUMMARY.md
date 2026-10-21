@@ -60,6 +60,23 @@
 - [Badges](qbx_idcard/badges.md)
 - [Mugshot uploads](qbx_idcard/cdn.md)
 
+## qbx_phone
+
+- [Overview](qbx_phone/index.md)
+- [Installation](qbx_phone/install.md)
+- [FAQ & troubleshooting](qbx_phone/faq.md)
+- [Full reference (README)](qbx_phone/readme.md)
+- [Configuration](qbx_phone/config.md)
+- [Items & SIM cards](qbx_phone/items.md)
+- [Cell towers](qbx_phone/towers.md)
+- [Wi-Fi, quick settings & flashlight](qbx_phone/wifi.md)
+- [Voice & group calls](qbx_phone/voice.md)
+- [Duckcam video calls](qbx_phone/duckcam.md)
+- [Exports & events](qbx_phone/exports.md)
+- [Custom apps](qbx_phone/apps.md)
+- [Built-in apps](qbx_phone/built-in-apps.md)
+- [Admin panel](qbx_phone/admin.md)
+
 ## qbx_core
 
 - [Overview](qbx_core/index.md)
