@@ -19,7 +19,7 @@
 | Key | Default | Description |
 | --- | --- | --- |
 | `openKey` | `'F1'` | Opens and closes the phone. Players can rebind it in the FiveM key settings |
-| `answerKey` / `declineKey` | `'Y'` / `'N'` | Answer or decline a call while the phone is closed. Decline also hangs up |
+| `answerKey` / `declineKey` | `'Y'` / `'N'` | Answer or decline a ringing call while the phone is closed. Neither works while dead, downed or cuffed. To hang up, open the phone |
 | `walkWhileOpen` | `true` | Keep movement while the phone is open. Typing in a text field always takes full focus |
 | `themes` | `{ 'flip', 'slab' }` | Phone styles players can pick in Settings |
 | `defaultTheme` | `'flip'` | Style a new phone starts with. `'flip'` is the Flip-Flop, `'slab'` is the Bill |
@@ -27,6 +27,10 @@
 | `flashlight` | | Phone flashlight beam, see [wifi.md](wifi.md) |
 | `duckcam` | | Selfie camera and video quality, see [duckcam.md](duckcam.md) |
 | `prop`, `animations` | | Hand prop and animation clips |
+
+The keys are FiveM key mappings named `qbx_phone_open`, `qbx_phone_answer` and
+`qbx_phone_decline`, so players can rebind them under Settings → Key Bindings → FiveM.
+Changing a default only affects players who never had the mapping before.
 
 Limit players to one style by listing just that one in `themes`.
 
@@ -42,6 +46,10 @@ Limit players to one style by listing just that one in `themes`.
 | `limits.groups` | `25` | Contact groups per character |
 | `limits.groupMembers` | `8` | Contacts per group |
 | `limits.messagesPer10s` | `10` | Texts one player can send per 10 seconds |
+
+Everything else a player can repeat is rate limited on the server too: 5 calls per 10
+seconds, 20 contact, group, thread or recents changes per 10 seconds, 5 wrong Wi-Fi
+passwords per minute and 3 Duck Cloud backups per 30 seconds.
 
 ## Player settings
 
@@ -65,4 +73,5 @@ deleting a character removes its phone data:
 ```
 
 Call history and texts are stored per phone number, not per character, and are left
-alone. With SIM cards they move with the SIM.
+alone. With SIM cards they move with the SIM. `qbx_phone_simcards` is also keyed by
+number; its `citizenid` column only records who used the SIM last.

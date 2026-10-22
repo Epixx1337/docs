@@ -58,12 +58,12 @@ The keys people change most. Everything else is on the [configuration](config.md
 | Key | File | What it does |
 | --- | --- | --- |
 | `openKey` | `config/client.lua` | Opens the phone (`F1`). Players can rebind it |
-| `answerKey` / `declineKey` | `config/client.lua` | Answer or decline while the phone is closed (`Y` / `N`) |
+| `answerKey` / `declineKey` | `config/client.lua` | Answer or decline a ringing call while the phone is closed (`Y` / `N`) |
 | `themes` / `defaultTheme` | `config/client.lua` | Which styles players can pick, and the default. `'flip'` is the Flip-Flop, `'slab'` is the Bill |
 | `allowTablet` | `config/client.lua` | Lets the Flip-Flop unfold into a tablet |
-| `calls.maxGroupSize` | `config/shared.lua` | Most people in one call |
+| `calls.maxGroupSize` | `config/shared.lua` | Most people in one call, caller included |
 | `adminGroup` | `config/server.lua` | Who can open `/phoneadmin` |
-| `limits` | `config/server.lua` | Contacts, groups and texts per player |
+| `limits` | `config/server.lua` | Contacts, groups, and how many texts a player can send per 10 seconds |
 
 ## After installing: sanity checklist
 

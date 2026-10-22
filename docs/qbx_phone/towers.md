@@ -18,9 +18,11 @@ towers = {
   like, with any range; overlapping towers are fine.
 - Signal bars come from the strongest tower: full near the centre, dropping to one
   bar at the edge. Outside every sphere there is no service.
-- With no service you cannot place or receive calls. An active call drops after
-  `dropGrace` seconds without signal.
-- The server checks signal itself when a call is placed or answered.
+- With no service you cannot place or receive calls. A call drops after
+  `dropGrace` seconds without signal, and a call that was still ringing is logged as
+  missed.
+- The server checks signal itself when a call is placed or answered, and every
+  second during the call, so a modified client can't keep a call alive.
 
 The bundled list is a rough starting layout. Replace it with your own.
 

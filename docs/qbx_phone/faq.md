@@ -33,11 +33,19 @@ It stays hidden until it is set up. Set `duckcam.enabled = true` in `config/serv
 
 ## Nobody hears the ringtone or notification sound
 
-The sound mode is per phone: **Silent** mutes everything but still shows notifications, **Vibrate** only buzzes quietly, and **Do not disturb** hides notifications and calls entirely. Check the slider on the side of the phone and the quick settings.
+The sound mode is per phone: **Silent** mutes everything but still shows notifications, **Vibrate** only buzzes quietly, and **Do not disturb** hides notifications and silences calls. A call still shows up when you open the phone and goes to missed if you don't. Check the slider on the side of the phone and the quick settings.
 
 ## A badge won't go away
 
 Badges clear when you open the app or tap the notification. In Peeps, unread texts count per conversation, so the badge goes down as you open each conversation. Closing a notification with its × keeps the badge, like a real phone.
+
+## Pressing N doesn't hang up
+
+The decline key (`N`) only declines a call that is still ringing. To end a call you're in, open the phone and tap the red button. This keeps players who talk with `N` from hanging up by accident. Players can rebind both keys under Settings → Key Bindings → FiveM.
+
+## "Wait a moment before calling again" or "Slow down"
+
+The server rate-limits calls, texts and contact changes so a modified client can't spam other players or the database. Normal use never hits the limits; see [Configuration](config.md).
 
 ## Can other resources send texts or notifications?
 

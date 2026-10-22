@@ -53,6 +53,7 @@ exports.qbx_phone:SendMessage('Bennys', '5550142921', 'Your vehicle is ready for
 | `qbx_phone:client:open` | client | Opens the phone |
 | `qbx_phone:client:shareNumber` | client | Gives your number to the player you face |
 | `qb-phone:client:GiveContactDetails` | client | Same as above. Kept so the stock qbx_radialmenu entry works unchanged |
+| `qbx_npwd:client:setPhoneVisible` | client | `true` opens the phone, `false` closes it. Kept for resources written for qbx_npwd |
 
 ## npwd compatibility
 

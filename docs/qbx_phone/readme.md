@@ -57,7 +57,8 @@ keeps the closed Flip-Flop on screen (in game it goes back in the pocket) and
 "hide phone" puts it away again. Useful URL options: `?open=1`, `&tablet=1`,
 `&closed=1`, `&theme=slab`, `&off=1`, `&setup=1`, `&app=contacts`,
 `&app=messages&thread=5550142921`,
-`&scene=incoming|call|groupCall|videoCall|offer|notify|text`, `&clean=1` hides the bar.
+`&scene=incoming|groupIncoming|call|groupCall|videoCall|endCall|offer|notify|text|admin`,
+`&clean=1` hides the bar.
 In the preview, texts you send get a mock reply.
 
 ## Docs

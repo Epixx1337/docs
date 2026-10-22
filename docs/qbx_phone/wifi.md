@@ -11,7 +11,7 @@ sound mode, do not disturb, fold/unfold (Flip-Flop), volume and the power menu.
 - **Sound mode** cycles Ring → Vibrate → Silent. Silent makes no sound at all but
   notifications still pop up. Vibrate plays a quiet buzz instead of the ringtone.
 - **Do not disturb**: nothing pops up and nothing makes a sound. Incoming calls
-  ring silently in the phone and go to missed if you don't open it.
+  still arrive silently: open the phone to answer, or they go to missed.
 
 ## Power
 
