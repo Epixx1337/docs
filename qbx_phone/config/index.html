@@ -2902,7 +2902,7 @@
 <tr>
 <td><code>answerKey</code> / <code>declineKey</code></td>
 <td><code>'Y'</code> / <code>'N'</code></td>
-<td>Answer or decline a call while the phone is closed. Decline also hangs up</td>
+<td>Answer or decline a ringing call while the phone is closed. Neither works while dead, downed or cuffed. To hang up, open the phone</td>
 </tr>
 <tr>
 <td><code>walkWhileOpen</code></td>
@@ -2941,6 +2941,9 @@
 </tr>
 </tbody>
 </table>
+<p>The keys are FiveM key mappings named <code>qbx_phone_open</code>, <code>qbx_phone_answer</code> and
+<code>qbx_phone_decline</code>, so players can rebind them under Settings → Key Bindings → FiveM.
+Changing a default only affects players who never had the mapping before.</p>
 <p>Limit players to one style by listing just that one in <code>themes</code>.</p>
 <h2 id="configserverlua"><code>config/server.lua</code><a class="headerlink" href="#configserverlua" title="Permanent link">&para;</a></h2>
 <table>
@@ -2994,6 +2997,9 @@
 </tr>
 </tbody>
 </table>
+<p>Everything else a player can repeat is rate limited on the server too: 5 calls per 10
+seconds, 20 contact, group, thread or recents changes per 10 seconds, 5 wrong Wi-Fi
+passwords per minute and 3 Duck Cloud backups per 30 seconds.</p>
 <h2 id="player-settings">Player settings<a class="headerlink" href="#player-settings" title="Permanent link">&para;</a></h2>
 <p>Ringtone, tones, sound mode, volume, wallpaper, shell colour, style, size, do not
 disturb, airplane mode and the power state are stored in the player's local KVP, keyed by character. With
@@ -3009,7 +3015,8 @@ deleting a character removes its phone data:</p>
 <span class="p">{</span><span class="s1">'qbx_phone_cloud'</span><span class="p">,</span><span class="w"> </span><span class="s1">'citizenid'</span><span class="p">},</span>
 </code></pre></div>
 <p>Call history and texts are stored per phone number, not per character, and are left
-alone. With SIM cards they move with the SIM.</p>
+alone. With SIM cards they move with the SIM. <code>qbx_phone_simcards</code> is also keyed by
+number; its <code>citizenid</code> column only records who used the SIM last.</p>
 
 
 

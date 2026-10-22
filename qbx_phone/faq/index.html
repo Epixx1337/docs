@@ -2277,6 +2277,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pressing-n-doesnt-hang-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pressing N doesn't hang up
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wait-a-moment-before-calling-again-or-slow-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Wait a moment before calling again" or "Slow down"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#can-other-resources-send-texts-or-notifications" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2939,6 +2961,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pressing-n-doesnt-hang-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pressing N doesn't hang up
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wait-a-moment-before-calling-again-or-slow-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Wait a moment before calling again" or "Slow down"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#can-other-resources-send-texts-or-notifications" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3023,9 +3067,13 @@
 <h2 id="duckcam-is-missing">Duckcam is missing<a class="headerlink" href="#duckcam-is-missing" title="Permanent link">&para;</a></h2>
 <p>It stays hidden until it is set up. Set <code>duckcam.enabled = true</code> in <code>config/server.lua</code> and add both Cloudflare convars with <code>set</code> in <code>server.cfg</code>. See <a href="../duckcam/">Duckcam video calls</a>.</p>
 <h2 id="nobody-hears-the-ringtone-or-notification-sound">Nobody hears the ringtone or notification sound<a class="headerlink" href="#nobody-hears-the-ringtone-or-notification-sound" title="Permanent link">&para;</a></h2>
-<p>The sound mode is per phone: <strong>Silent</strong> mutes everything but still shows notifications, <strong>Vibrate</strong> only buzzes quietly, and <strong>Do not disturb</strong> hides notifications and calls entirely. Check the slider on the side of the phone and the quick settings.</p>
+<p>The sound mode is per phone: <strong>Silent</strong> mutes everything but still shows notifications, <strong>Vibrate</strong> only buzzes quietly, and <strong>Do not disturb</strong> hides notifications and silences calls. A call still shows up when you open the phone and goes to missed if you don't. Check the slider on the side of the phone and the quick settings.</p>
 <h2 id="a-badge-wont-go-away">A badge won't go away<a class="headerlink" href="#a-badge-wont-go-away" title="Permanent link">&para;</a></h2>
 <p>Badges clear when you open the app or tap the notification. In Peeps, unread texts count per conversation, so the badge goes down as you open each conversation. Closing a notification with its × keeps the badge, like a real phone.</p>
+<h2 id="pressing-n-doesnt-hang-up">Pressing N doesn't hang up<a class="headerlink" href="#pressing-n-doesnt-hang-up" title="Permanent link">&para;</a></h2>
+<p>The decline key (<code>N</code>) only declines a call that is still ringing. To end a call you're in, open the phone and tap the red button. This keeps players who talk with <code>N</code> from hanging up by accident. Players can rebind both keys under Settings → Key Bindings → FiveM.</p>
+<h2 id="wait-a-moment-before-calling-again-or-slow-down">"Wait a moment before calling again" or "Slow down"<a class="headerlink" href="#wait-a-moment-before-calling-again-or-slow-down" title="Permanent link">&para;</a></h2>
+<p>The server rate-limits calls, texts and contact changes so a modified client can't spam other players or the database. Normal use never hits the limits; see <a href="../config/">Configuration</a>.</p>
 <h2 id="can-other-resources-send-texts-or-notifications">Can other resources send texts or notifications?<a class="headerlink" href="#can-other-resources-send-texts-or-notifications" title="Permanent link">&para;</a></h2>
 <p>Yes. <code>exports.qbx_phone:SendMessage(sender, number, body)</code> on the server sends a text; the sender can be a short label such as <code>'Bennys'</code>. <code>exports.qbx_phone:Notify({...})</code> on the client shows a notification. npwd's <code>emitMessage</code> and <code>createNotification</code> keep working too. See <a href="../exports/">Exports and events</a>.</p>
 <h2 id="can-i-add-my-own-app">Can I add my own app?<a class="headerlink" href="#can-i-add-my-own-app" title="Permanent link">&para;</a></h2>

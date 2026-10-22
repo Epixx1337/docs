@@ -2973,7 +2973,8 @@ Keep state in <code>$state</code>, not in anything tied to the layout.</p>
 <li>Follow the qbx_core Lua style: 4 spaces, <code>local</code> everything, early returns.</li>
 <li>Validate every value from the client: its type, length and ownership. Never trust
   ids, numbers or prices sent by the UI.</li>
-<li>Rate-limit anything a player can repeat (see <code>messages.lua</code>). Put the limits in
+<li>Rate-limit anything a player can repeat with <code>limiter.allow(source, key, count)</code>
+  from <code>server/modules/limiter.lua</code>. Put limits admins may tune in
   <code>config/server.lua</code> under <code>limits</code>.</li>
 <li>Character-owned data uses <code>citizenid</code>; data that follows a SIM uses the phone number.
   List character-owned tables under character deletion in <a href="../config/">config.md</a>.</li>
