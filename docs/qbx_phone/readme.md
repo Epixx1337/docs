@@ -17,6 +17,7 @@ slab phone with a duck-bill home button, available as a second style.
 - **Duckcam** video calls, relayed through a Cloudflare TURN key you provide
 - Contacts, favourites and contact groups
 - **Peeps** texting to contacts or any number, with read receipts and unread badges
+- **Quackers** social feed: quack, requack, like, reply, mention and follow, with admin moderation
 - Give your number to the player you are facing (radial menu), with an accept prompt
 - Optional **SIM cards**: the phone becomes a one-slot ox_inventory container and the number lives on the SIM
 - Optional **cell towers** with configurable coverage and an in-world debug view
@@ -26,7 +27,7 @@ slab phone with a duck-bill home button, available as a second style.
 - Duck ringtones and notification tones, synthesized in the browser (no audio files to license)
 - Ring, vibrate and silent modes, do not disturb, and power off/on with a Qbox boot screen
 - Settings stored per player in KVP, with Duck Cloud backup and restore
-- `/phoneadmin` panel for players, numbers, SIM cards, contacts and call history
+- `/phoneadmin` panel for players, numbers, SIM cards, contacts, call history and Quackers moderation
 - Drop-in replacement for npwd exports used by other resources
 
 ## Requirements
@@ -56,8 +57,9 @@ In the browser, F1 opens and closes the phone and Escape closes it. "closed phon
 keeps the closed Flip-Flop on screen (in game it goes back in the pocket) and
 "hide phone" puts it away again. Useful URL options: `?open=1`, `&tablet=1`,
 `&closed=1`, `&theme=slab`, `&off=1`, `&setup=1`, `&app=contacts`,
-`&app=messages&thread=5550142921`,
-`&scene=incoming|groupIncoming|call|groupCall|videoCall|endCall|offer|notify|text|admin`,
+`&app=messages&thread=5550142921`, `&app=quackers&quack=2`, `&app=quackers&profile=jordan`,
+`&app=quackers&hatch=1` (account setup),
+`&scene=incoming|groupIncoming|call|groupCall|videoCall|endCall|offer|notify|text|quack|mention|admin`,
 `&clean=1` hides the bar.
 In the preview, texts you send get a mock reply.
 
@@ -71,6 +73,7 @@ In the preview, texts you send get a mock reply.
 - [Built-in apps](built-in-apps.md), with starter files in [templates/app](https://github.com/Epixx1337/qbx_phone/blob/main/templates/app)
 - [Voice and group calls](voice.md)
 - [Duckcam video calls](duckcam.md)
+- [Quackers](quackers.md)
 - [Exports, events and npwd compatibility](exports.md)
 - [Admin panel](admin.md)
 

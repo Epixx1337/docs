@@ -47,6 +47,18 @@ The decline key (`N`) only declines a call that is still ringing. To end a call 
 
 The server rate-limits calls, texts and contact changes so a modified client can't spam other players or the database. Normal use never hits the limits; see [Configuration](config.md).
 
+## Quackers says "No connection"
+
+Quackers needs cell service or Wi-Fi, like calls and texts. Check the signal bars, airplane mode and mobile data in quick settings. With cell towers on, move into coverage or join a Wi-Fi network.
+
+## Can a player change their Quackers handle?
+
+Not from the phone, so mentions keep pointing at the right person. Players can change their display name and bio from their profile. An admin can change the handle in `/phoneadmin` → Quackers.
+
+## How do I remove a quack or a rude account name?
+
+Open `/phoneadmin` → Quackers. Find the account by handle, name or citizen ID, then rename it or list its quacks and delete them. A deleted quack disappears from every open phone straight away. To turn the app off for everyone, set `quackers.enabled = false` in `config/shared.lua`. See [Quackers](quackers.md).
+
 ## Can other resources send texts or notifications?
 
 Yes. `exports.qbx_phone:SendMessage(sender, number, body)` on the server sends a text; the sender can be a short label such as `'Bennys'`. `exports.qbx_phone:Notify({...})` on the client shows a notification. npwd's `emitMessage` and `createNotification` keep working too. See [Exports and events](exports.md).

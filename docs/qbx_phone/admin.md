@@ -9,5 +9,9 @@
   history (clear per number) and their Duck Cloud backup.
 - **SIM cards** (with SIM cards enabled): every SIM ever issued, who used it last
   and when. Give a player a SIM, optionally with a chosen number.
+- **Quackers** (with `quackers.enabled`): search accounts by handle, name or citizen
+  ID, rename an account's handle and display name, list its quacks and delete any
+  quack. Deleting a quack also removes its replies, requacks and likes, and it
+  disappears from every open phone. The overview shows how many quacks were posted.
 
 Every panel action is checked on the server against the same permission.

@@ -11,6 +11,7 @@ A duck-themed phone for Qbox and a drop-in replacement for npwd. The default dev
 - **Three fold modes**: closed (cover screen glance), open (phone) and unfolded (tablet). Every app has a layout for each, and the phone folds and unfolds with the app still open.
 - **Calls over pma-voice**, including **group calls** to a contact group, with no changes to pma-voice.
 - **Peeps**: texting to contacts or any number, with read receipts and unread badges.
+- **Quackers**: the phone's social feed. Quack, requack, like, reply in threads, mention with `@handle` and follow accounts, with a For you and a Following tab. Admins moderate it from `/phoneadmin`.
 - **Flock**: contacts, favourites and contact groups. Give your number to the player in front of you from the radial menu; they get an accept prompt.
 - **Duckcam** video calls, relayed through a Cloudflare TURN key you provide. Off until you add one.
 - Optional **SIM cards**: the phone becomes a one-slot ox_inventory container and the number lives on the SIM.
@@ -37,8 +38,9 @@ A duck-themed phone for Qbox and a drop-in replacement for npwd. The default dev
 | [Wi-Fi, quick settings and flashlight](wifi.md) | networks, passwords, Wi-Fi-only apps |
 | [Voice and group calls](voice.md) | how calls use pma-voice |
 | [Duckcam video calls](duckcam.md) | the Cloudflare TURN setup |
+| [Quackers](quackers.md) | the social feed, notifications and moderation |
 | [Exports and events](exports.md) | notifications, texts, npwd compatibility |
 | [Custom apps](apps.md) | add an app from your own resource |
 | [Built-in apps](built-in-apps.md) | contribute an app to the phone itself |
-| [Admin panel](admin.md) | `/phoneadmin` |
+| [Admin panel](admin.md) | `/phoneadmin`, including Quackers moderation |
 | [Full reference](readme.md) | mirrored from the repo |

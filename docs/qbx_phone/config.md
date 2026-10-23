@@ -9,6 +9,7 @@
 | `simcards.item` | `'simcard'` | SIM card item name |
 | `calls.ringTime` | `30` | Seconds before an unanswered call is missed |
 | `calls.maxGroupSize` | `8` | Most people in one call, caller included |
+| `quackers.enabled` | `true` | The Quackers social feed, see [quackers.md](quackers.md) |
 | `share.distance` | `3.0` | How close the other player must be to receive your number |
 | `share.cooldown` | `10` | Seconds between number shares |
 | `towers` | | See [towers.md](towers.md) |
@@ -46,10 +47,12 @@ Limit players to one style by listing just that one in `themes`.
 | `limits.groups` | `25` | Contact groups per character |
 | `limits.groupMembers` | `8` | Contacts per group |
 | `limits.messagesPer10s` | `10` | Texts one player can send per 10 seconds |
+| `limits.quacksPerMinute` | `6` | Quacks and replies one player can post per minute |
 
 Everything else a player can repeat is rate limited on the server too: 5 calls per 10
 seconds, 20 contact, group, thread or recents changes per 10 seconds, 5 wrong Wi-Fi
-passwords per minute and 3 Duck Cloud backups per 30 seconds.
+passwords per minute, 3 Duck Cloud backups per 30 seconds, and 20 Quackers likes,
+requacks or follows per 10 seconds.
 
 ## Player settings
 
@@ -70,7 +73,10 @@ deleting a character removes its phone data:
 {'qbx_phone_contacts', 'citizenid'},
 {'qbx_phone_groups', 'citizenid'},
 {'qbx_phone_cloud', 'citizenid'},
+{'qbx_phone_quackers_accounts', 'citizenid'},
 ```
+
+Deleting the Quackers account also deletes its quacks, likes and follows.
 
 Call history and texts are stored per phone number, not per character, and are left
 alone. With SIM cards they move with the SIM. `qbx_phone_simcards` is also keyed by

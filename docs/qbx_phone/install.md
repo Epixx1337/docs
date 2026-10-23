@@ -6,7 +6,7 @@
 | --- | --- |
 | [qbx_core](https://github.com/Qbox-project/qbx_core) | character data and phone numbers |
 | [ox_lib](https://github.com/CommunityOx/ox_lib) | callbacks, keybinds, commands, UI theming |
-| [oxmysql](https://github.com/CommunityOx/oxmysql) | contacts, groups, calls, texts, SIM cards, cloud backups |
+| [oxmysql](https://github.com/CommunityOx/oxmysql) | contacts, groups, calls, texts, Quackers, SIM cards, cloud backups |
 | [ox_inventory](https://github.com/CommunityOx/ox_inventory) | the phone item and, optionally, SIM card containers |
 | [pma-voice](https://github.com/AvarianKnight/pma-voice) | call audio. No changes needed, group calls included |
 
@@ -34,9 +34,10 @@
     {'qbx_phone_contacts', 'citizenid'},
     {'qbx_phone_groups', 'citizenid'},
     {'qbx_phone_cloud', 'citizenid'},
+    {'qbx_phone_quackers_accounts', 'citizenid'},
     ```
 
-    Call history and texts belong to the phone number, not the character, so they are left alone.
+    Deleting the Quackers account also deletes its quacks, likes and follows. Call history and texts belong to the phone number, not the character, so they are left alone.
 
 The UI ships prebuilt in `web/build`. You only need [bun](https://bun.sh) if you change the UI source.
 
@@ -63,7 +64,8 @@ The keys people change most. Everything else is on the [configuration](config.md
 | `allowTablet` | `config/client.lua` | Lets the Flip-Flop unfold into a tablet |
 | `calls.maxGroupSize` | `config/shared.lua` | Most people in one call, caller included |
 | `adminGroup` | `config/server.lua` | Who can open `/phoneadmin` |
-| `limits` | `config/server.lua` | Contacts, groups, and how many texts a player can send per 10 seconds |
+| `quackers.enabled` | `config/shared.lua` | The Quackers social feed (on by default) |
+| `limits` | `config/server.lua` | Contacts, groups, how many texts a player can send per 10 seconds and how many quacks per minute |
 
 ## After installing: sanity checklist
 
@@ -71,4 +73,5 @@ The keys people change most. Everything else is on the [configuration](config.md
 - [ ] The radial menu's "give number" entry shows an accept prompt to the player you face
 - [ ] Two players can call each other and hear each other through pma-voice
 - [ ] A text sent in Peeps arrives, shows a badge, and the badge clears when the conversation is opened
+- [ ] Quackers asks for a handle the first time, and a quack from one player shows up as "new quacks" for another
 - [ ] `/phoneadmin` opens for an admin
