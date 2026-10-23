@@ -4,7 +4,7 @@
 
 | Dependency | Notes |
 | --- | --- |
-| [qbx_core](https://github.com/Qbox-project/qbx_core) | character data and phone numbers |
+| [qbx_core](https://github.com/Qbox-project/qbx_core) | character data, and the number a phone gets the first time it is used |
 | [ox_lib](https://github.com/CommunityOx/ox_lib) | callbacks, keybinds, commands, UI theming |
 | [oxmysql](https://github.com/CommunityOx/oxmysql) | contacts, groups, calls, texts, Quackers, SIM cards, cloud backups |
 | [ox_inventory](https://github.com/CommunityOx/ox_inventory) | the phone item and, optionally, SIM card containers |
@@ -35,6 +35,7 @@
     {'qbx_phone_groups', 'citizenid'},
     {'qbx_phone_cloud', 'citizenid'},
     {'qbx_phone_quackers_accounts', 'citizenid'},
+    {'qbx_phone_devices', 'owner'},
     ```
 
     Deleting the Quackers account also deletes its quacks, likes and follows. Call history and texts belong to the phone number, not the character, so they are left alone.
@@ -74,4 +75,5 @@ The keys people change most. Everything else is on the [configuration](config.md
 - [ ] Two players can call each other and hear each other through pma-voice
 - [ ] A text sent in Peeps arrives, shows a badge, and the badge clears when the conversation is opened
 - [ ] Quackers asks for a handle the first time, and a quack from one player shows up as "new quacks" for another
+- [ ] Hand your phone to another player: they see your contacts and wallpaper, not theirs
 - [ ] `/phoneadmin` opens for an admin

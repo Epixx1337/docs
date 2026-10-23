@@ -26,8 +26,8 @@ volume rocker and the power button. The lower half never moves when the phone fl
 open or unfolds into a tablet, so the buttons stay in exactly the same place and
 work open or closed. The Bill has the same three on its right edge.
 
-A brand-new phone starts powered off: new characters, and with SIM cards any phone
-the player hasn't used before. The first boot leads into the setup screen.
+A phone that was never set up starts powered off. The first boot leads into the
+setup screen.
 
 ## Wi-Fi networks
 

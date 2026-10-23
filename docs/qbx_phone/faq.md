@@ -69,7 +69,15 @@ Yes. Register it from your own resource with `exports.qbx_phone:RegisterApp`. A 
 
 ## Do players keep their settings on a new phone?
 
-Settings live in the player's local KVP, per character. With SIM cards on, a different phone starts the setup screen, which offers to restore the **Duck Cloud** backup. Contacts and groups belong to the character and are never lost with a phone.
+Contacts, groups and settings live on the phone. A new phone starts the setup screen, which offers to restore the **Duck Cloud** backup of the character who sets it up. Duck Cloud backs up automatically about ten seconds after a change, as long as it's on in Settings → Duck Cloud.
+
+## What happens when a phone is stolen?
+
+The thief sees what's on that phone, not their own: its contacts, texts, call history, wallpaper and the Quackers account it's logged into. Because the number is on the phone (or on the SIM inside it), they also receive the owner's calls and texts. The owner gets back on their feet by using a new phone (with SIM cards off, the number moves to it and the stolen one loses service), restoring from Duck Cloud on the setup screen, and logging out other phones in Quackers → Edit profile. See [Items and SIM cards](items.md#what-lives-on-a-phone).
+
+## I sent a text but it only says "Sent"
+
+The other phone has no service right now: no signal, airplane mode, powered off or no SIM. The text waits on the server and arrives within a few seconds of that phone getting service back, then the receipt changes to "Delivered". Calls to a phone without service don't ring at all.
 
 ## Something else?
 

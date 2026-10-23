@@ -20,7 +20,8 @@ A duck-themed phone for Qbox and a drop-in replacement for npwd. The default dev
 - **Side buttons**: a volume rocker, a ring / vibrate / silent slider and a power button with a Qbox boot screen. New characters start with the phone off.
 - Duck ringtones and notification tones synthesized in the browser, so there are no audio files to license.
 - Badges that clear when you open the app or tap the notification.
-- Settings saved per player in KVP, with a **Duck Cloud** backup that restores onto a new phone.
+- **Everything lives on the phone**: contacts, settings, texts and the Quackers login. Steal a phone and you see its owner's data, not your own. A **Duck Cloud** backup lets the owner restore onto a new phone.
+- Texts sent to a phone without signal wait and arrive when it gets service back.
 - A **custom app API** with ready-made templates, and a `/phoneadmin` panel.
 - **npwd compatibility**: the npwd exports other resources call keep working, and the stock radial menu entry works unchanged.
 

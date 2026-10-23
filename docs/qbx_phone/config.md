@@ -5,7 +5,7 @@
 | Key | Default | Description |
 | --- | --- | --- |
 | `phoneItems` | `{ 'phone' }` | Items that count as a phone |
-| `simcards.enabled` | `false` | Numbers live on SIM cards instead of the character, see [items.md](items.md) |
+| `simcards.enabled` | `false` | Numbers live on SIM cards instead of on the phone, see [items.md](items.md) |
 | `simcards.item` | `'simcard'` | SIM card item name |
 | `calls.ringTime` | `30` | Seconds before an unanswered call is missed |
 | `calls.maxGroupSize` | `8` | Most people in one call, caller included |
@@ -43,8 +43,8 @@ Limit players to one style by listing just that one in `themes`.
 | `wifiPasswords` | `{}` | Password per secured Wi-Fi network id, see [wifi.md](wifi.md) |
 | `duckcam.enabled` | `false` | Video calls, see [duckcam.md](duckcam.md). Needs the Cloudflare convars |
 | `duckcam.ttl` | `14400` | Lifetime in seconds of each player's TURN credential |
-| `limits.contacts` | `250` | Contacts per character |
-| `limits.groups` | `25` | Contact groups per character |
+| `limits.contacts` | `250` | Contacts per phone |
+| `limits.groups` | `25` | Contact groups per phone |
 | `limits.groupMembers` | `8` | Contacts per group |
 | `limits.messagesPer10s` | `10` | Texts one player can send per 10 seconds |
 | `limits.quacksPerMinute` | `6` | Quacks and replies one player can post per minute |
@@ -57,12 +57,15 @@ requacks or follows per 10 seconds.
 ## Player settings
 
 Ringtone, tones, sound mode, volume, wallpaper, shell colour, style, size, do not
-disturb, airplane mode and the power state are stored in the player's local KVP, keyed by character. With
-Duck Cloud backup on (the default), a copy is kept in `qbx_phone_cloud` so a new
-phone can restore it.
+disturb, airplane mode and the power state are stored with the phone in
+`qbx_phone_devices`, keyed by its serial. Whoever holds the phone sees its settings.
+A phone that was never set up starts the setup screen, which offers the Duck Cloud
+restore. Settings saved by older versions in the player's KVP move onto their own
+phone the first time they use it.
 
-With SIM cards enabled, settings are also tied to the phone's serial. Picking up a
-different phone starts the setup screen, which offers the Duck Cloud restore.
+With Duck Cloud backup on (the default), the phone's settings, contacts and groups
+are copied to its owner's row in `qbx_phone_cloud` about ten seconds after a change.
+See [items.md](items.md#what-lives-on-a-phone) for what follows the phone.
 
 ## Character deletion
 
@@ -74,9 +77,12 @@ deleting a character removes its phone data:
 {'qbx_phone_groups', 'citizenid'},
 {'qbx_phone_cloud', 'citizenid'},
 {'qbx_phone_quackers_accounts', 'citizenid'},
+{'qbx_phone_devices', 'owner'},
 ```
 
-Deleting the Quackers account also deletes its quacks, likes and follows.
+Contacts and groups are removed when the character who saved them is deleted.
+Deleting the Quackers account also deletes its quacks, likes and follows. A phone
+whose owner was deleted registers to whoever uses it next.
 
 Call history and texts are stored per phone number, not per character, and are left
 alone. With SIM cards they move with the SIM. `qbx_phone_simcards` is also keyed by

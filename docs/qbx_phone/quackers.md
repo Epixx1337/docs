@@ -10,9 +10,15 @@ The first time a character opens Quackers they hatch an account: a unique handle
 Players can change their display name and bio later, but not their handle. Admins
 can rename both from `/phoneadmin`.
 
-Accounts belong to the character, not the phone number, so they survive a lost
-phone or SIM. Deleting the account (or the character, see
-[config.md](config.md#character-deletion)) removes its quacks, likes and follows.
+An account belongs to the character that hatched it, and each character can have one.
+Logins belong to the phone: a phone stays logged into its account whoever holds it,
+so a stolen phone lets the thief quack as its owner. A phone that never used Quackers
+logs into its holder's own account. On their own phone, a player can **Log out of
+this phone** or **Log out other phones** under Edit profile. A logged-out phone
+offers to log back in as its holder.
+
+Deleting the account (or the character, see [config.md](config.md#character-deletion))
+removes its quacks, likes and follows.
 
 ## Quacks
 
@@ -33,8 +39,8 @@ requacks, bio and follower counts.
 ## Notifications
 
 The owner of a quack is notified when someone replies to it or requacks it, and an
-account is notified when someone mentions or follows it. They only arrive while the
-player is online with a phone that has signal. Players can mute them under
+account is notified when someone mentions or follows it. Notifications go to every
+phone logged into the account that has signal at that moment. Players can mute them under
 Settings → Notifications → Quackers.
 
 While the feed is open, new quacks from other players collect in a "new quacks"
@@ -43,7 +49,8 @@ button at the top instead of moving the list.
 ## Signal
 
 Quackers needs a connection: cell service or Wi-Fi. Without one, the app shows "No
-connection" and nothing can be posted or loaded.
+connection" and nothing can be posted or loaded, and the phone gets no new quacks
+or notifications.
 
 ## Moderation
 

@@ -26,7 +26,9 @@ slab phone with a duck-bill home button, available as a second style.
 - Custom app API for other resources
 - Duck ringtones and notification tones, synthesized in the browser (no audio files to license)
 - Ring, vibrate and silent modes, do not disturb, and power off/on with a Qbox boot screen
-- Settings stored per player in KVP, with Duck Cloud backup and restore
+- Contacts, settings, texts and logins live on the phone, so a stolen phone shows its owner's data
+- Texts to a phone without service wait and arrive when it gets signal back
+- Duck Cloud backs up contacts and settings so a new phone can restore them
 - `/phoneadmin` panel for players, numbers, SIM cards, contacts, call history and Quackers moderation
 - Drop-in replacement for npwd exports used by other resources
 
@@ -59,7 +61,8 @@ keeps the closed Flip-Flop on screen (in game it goes back in the pocket) and
 `&closed=1`, `&theme=slab`, `&off=1`, `&setup=1`, `&app=contacts`,
 `&app=messages&thread=5550142921`, `&app=quackers&quack=2`, `&app=quackers&profile=jordan`,
 `&app=quackers&hatch=1` (account setup),
-`&scene=incoming|groupIncoming|call|groupCall|videoCall|endCall|offer|notify|text|quack|mention|admin`,
+`&scene=incoming|groupIncoming|call|groupCall|videoCall|endCall|offer|notify|text|arrived|quack|mention|admin`,
+`&app=quackers&loggedout=1`, `&app=settings&page=cloud&stolen=1`,
 `&clean=1` hides the bar.
 In the preview, texts you send get a mock reply.
 
