@@ -2365,6 +2365,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#what-happens-when-a-phone-is-stolen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens when a phone is stolen?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-sent-a-text-but-it-only-says-sent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I sent a text but it only says "Sent"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#something-else" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3110,6 +3132,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#what-happens-when-a-phone-is-stolen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens when a phone is stolen?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-sent-a-text-but-it-only-says-sent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I sent a text but it only says "Sent"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#something-else" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3179,7 +3223,11 @@
 <h2 id="can-i-add-my-own-app">Can I add my own app?<a class="headerlink" href="#can-i-add-my-own-app" title="Permanent link">&para;</a></h2>
 <p>Yes. Register it from your own resource with <code>exports.qbx_phone:RegisterApp</code>. A complete starter resource lives in the repository's <code>templates/resource</code> folder. See <a href="../apps/">Custom apps</a>. To add an app to the phone itself, see <a href="../built-in-apps/">Built-in apps</a>.</p>
 <h2 id="do-players-keep-their-settings-on-a-new-phone">Do players keep their settings on a new phone?<a class="headerlink" href="#do-players-keep-their-settings-on-a-new-phone" title="Permanent link">&para;</a></h2>
-<p>Settings live in the player's local KVP, per character. With SIM cards on, a different phone starts the setup screen, which offers to restore the <strong>Duck Cloud</strong> backup. Contacts and groups belong to the character and are never lost with a phone.</p>
+<p>Contacts, groups and settings live on the phone. A new phone starts the setup screen, which offers to restore the <strong>Duck Cloud</strong> backup of the character who sets it up. Duck Cloud backs up automatically about ten seconds after a change, as long as it's on in Settings → Duck Cloud.</p>
+<h2 id="what-happens-when-a-phone-is-stolen">What happens when a phone is stolen?<a class="headerlink" href="#what-happens-when-a-phone-is-stolen" title="Permanent link">&para;</a></h2>
+<p>The thief sees what's on that phone, not their own: its contacts, texts, call history, wallpaper and the Quackers account it's logged into. Because the number is on the phone (or on the SIM inside it), they also receive the owner's calls and texts. The owner gets back on their feet by using a new phone (with SIM cards off, the number moves to it and the stolen one loses service), restoring from Duck Cloud on the setup screen, and logging out other phones in Quackers → Edit profile. See <a href="../items/#what-lives-on-a-phone">Items and SIM cards</a>.</p>
+<h2 id="i-sent-a-text-but-it-only-says-sent">I sent a text but it only says "Sent"<a class="headerlink" href="#i-sent-a-text-but-it-only-says-sent" title="Permanent link">&para;</a></h2>
+<p>The other phone has no service right now: no signal, airplane mode, powered off or no SIM. The text waits on the server and arrives within a few seconds of that phone getting service back, then the receipt changes to "Delivered". Calls to a phone without service don't ring at all.</p>
 <h2 id="something-else">Something else?<a class="headerlink" href="#something-else" title="Permanent link">&para;</a></h2>
 <p>The <a href="../readme/">full reference</a> and the pages in the sidebar cover every option. Bugs go to the <strong>bug-reports forum</strong> on <a href="https://discord.gg/2PjtpqdQXP">Discord</a>.</p>
 

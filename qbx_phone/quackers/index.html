@@ -2906,9 +2906,14 @@ like other quacks, reply in threads, mention each other and follow accounts.</p>
 (3 to 15 letters, numbers or underscores, not case sensitive) and a display name.
 Players can change their display name and bio later, but not their handle. Admins
 can rename both from <code>/phoneadmin</code>.</p>
-<p>Accounts belong to the character, not the phone number, so they survive a lost
-phone or SIM. Deleting the account (or the character, see
-<a href="../config/#character-deletion">config.md</a>) removes its quacks, likes and follows.</p>
+<p>An account belongs to the character that hatched it, and each character can have one.
+Logins belong to the phone: a phone stays logged into its account whoever holds it,
+so a stolen phone lets the thief quack as its owner. A phone that never used Quackers
+logs into its holder's own account. On their own phone, a player can <strong>Log out of
+this phone</strong> or <strong>Log out other phones</strong> under Edit profile. A logged-out phone
+offers to log back in as its holder.</p>
+<p>Deleting the account (or the character, see <a href="../config/#character-deletion">config.md</a>)
+removes its quacks, likes and follows.</p>
 <h2 id="quacks">Quacks<a class="headerlink" href="#quacks" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2950,14 +2955,15 @@ in their thread and are counted on the quack. Profiles show an account's quacks,
 requacks, bio and follower counts.</p>
 <h2 id="notifications">Notifications<a class="headerlink" href="#notifications" title="Permanent link">&para;</a></h2>
 <p>The owner of a quack is notified when someone replies to it or requacks it, and an
-account is notified when someone mentions or follows it. They only arrive while the
-player is online with a phone that has signal. Players can mute them under
+account is notified when someone mentions or follows it. Notifications go to every
+phone logged into the account that has signal at that moment. Players can mute them under
 Settings → Notifications → Quackers.</p>
 <p>While the feed is open, new quacks from other players collect in a "new quacks"
 button at the top instead of moving the list.</p>
 <h2 id="signal">Signal<a class="headerlink" href="#signal" title="Permanent link">&para;</a></h2>
 <p>Quackers needs a connection: cell service or Wi-Fi. Without one, the app shows "No
-connection" and nothing can be posted or loaded.</p>
+connection" and nothing can be posted or loaded, and the phone gets no new quacks
+or notifications.</p>
 <h2 id="moderation">Moderation<a class="headerlink" href="#moderation" title="Permanent link">&para;</a></h2>
 <p><code>/phoneadmin</code> has a Quackers tab: search accounts by handle, name or citizen ID,
 rename an account, list its quacks and delete any quack. A deleted quack disappears

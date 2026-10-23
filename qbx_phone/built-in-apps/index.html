@@ -3007,8 +3007,9 @@ Keep state in <code>$state</code>, not in anything tied to the layout.</p>
 <li>Rate-limit anything a player can repeat with <code>limiter.allow(source, key, count)</code>
   from <code>server/modules/limiter.lua</code>. Put limits admins may tune in
   <code>config/server.lua</code> under <code>limits</code>.</li>
-<li>Character-owned data uses <code>citizenid</code>; data that follows a SIM uses the phone number.
-  List character-owned tables under character deletion in <a href="../config/">config.md</a>.</li>
+<li>Data on the phone uses its serial (<code>device.serial</code> from <code>phones.verify</code>); data
+  that follows the number uses the number; accounts use <code>citizenid</code>. List
+  character-owned tables under character deletion in <a href="../config/">config.md</a>.</li>
 <li>Respect the phone state: check <code>phones.isPowered</code> and <code>phones.hasService</code> before
   anything that needs signal.</li>
 </ul>

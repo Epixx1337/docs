@@ -2283,6 +2283,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-lives-on-a-phone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What lives on a phone
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2768,6 +2779,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-lives-on-a-phone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What lives on a phone
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2821,13 +2843,60 @@ opens the phone without editing ox_inventory.</p>
   passing metadata: <code>exports.ox_inventory:AddItem(source, 'simcard', 1, { number = '5551234567' })</code>.</li>
 <li>Your number is the SIM in the first phone you carry that has one. Lose the SIM
   (or the phone with it inside) and you lose the number. Whoever picks it up
-  receives your calls.</li>
-<li>Contacts, groups and the Duck Cloud backup belong to the character, so they
-  survive a lost SIM. Call history and Peeps texts belong to the number.</li>
+  receives your calls and texts.</li>
+<li>Call history and Peeps texts belong to the number, so they move with the SIM.</li>
 <li>Phones created before SIM cards were enabled are converted to containers the
   next time the server checks them.</li>
 </ul>
-<p>Without SIM cards the number is the character's <code>charinfo.phone</code> from qbx_core.</p>
+<p>Without SIM cards the number lives on the phone itself. The first time a character
+uses a phone, it is registered to them with their <code>charinfo.phone</code> number. When they
+start using a different phone, the number moves to that one, and the old phone
+shows "No service".</p>
+<h2 id="what-lives-on-a-phone">What lives on a phone<a class="headerlink" href="#what-lives-on-a-phone" title="Permanent link">&para;</a></h2>
+<p>Everything on a phone stays with the phone item, so whoever holds it sees what is on
+it, not their own data:</p>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Lives on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number, call history and Peeps texts</td>
+<td>The SIM (SIM cards on) or the phone (SIM cards off)</td>
+</tr>
+<tr>
+<td>Contacts and groups</td>
+<td>The phone</td>
+</tr>
+<tr>
+<td>Wallpaper, ringtone, sound mode and every other setting, including power and airplane mode</td>
+<td>The phone</td>
+</tr>
+<tr>
+<td>Quackers login</td>
+<td>The phone. It stays logged in until someone logs it out</td>
+</tr>
+<tr>
+<td>Duck Cloud backup</td>
+<td>The phone's owner, the character who set it up first</td>
+</tr>
+</tbody>
+</table>
+<p>A stolen phone therefore shows its owner's contacts, texts and Quackers account to
+the thief, and with the number on it, the thief receives the owner's calls and
+texts. To get back on their feet the owner:</p>
+<ol>
+<li>Starts using a new phone. With SIM cards off, their number moves to it straight
+   away; with SIM cards on, they need a new SIM.</li>
+<li>Picks <strong>Restore from Duck Cloud</strong> on the setup screen to get their contacts,
+   groups and settings back.</li>
+<li>Logs in to Quackers and uses <strong>Edit profile → Log out other phones</strong>.</li>
+</ol>
+<p>Only the owner can back a phone up to Duck Cloud or restore it, so a thief can't
+overwrite the owner's backup.</p>
 <p>SIM cards can be sold in any ox_inventory shop or handed out with <code>/phoneadmin</code>.</p>
 
 

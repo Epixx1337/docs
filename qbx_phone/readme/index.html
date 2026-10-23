@@ -2899,7 +2899,9 @@ slab phone with a duck-bill home button, available as a second style.</p>
 <li>Custom app API for other resources</li>
 <li>Duck ringtones and notification tones, synthesized in the browser (no audio files to license)</li>
 <li>Ring, vibrate and silent modes, do not disturb, and power off/on with a Qbox boot screen</li>
-<li>Settings stored per player in KVP, with Duck Cloud backup and restore</li>
+<li>Contacts, settings, texts and logins live on the phone, so a stolen phone shows its owner's data</li>
+<li>Texts to a phone without service wait and arrive when it gets signal back</li>
+<li>Duck Cloud backs up contacts and settings so a new phone can restore them</li>
 <li><code>/phoneadmin</code> panel for players, numbers, SIM cards, contacts, call history and Quackers moderation</li>
 <li>Drop-in replacement for npwd exports used by other resources</li>
 </ul>
@@ -2927,7 +2929,8 @@ keeps the closed Flip-Flop on screen (in game it goes back in the pocket) and
 <code>&amp;closed=1</code>, <code>&amp;theme=slab</code>, <code>&amp;off=1</code>, <code>&amp;setup=1</code>, <code>&amp;app=contacts</code>,
 <code>&amp;app=messages&amp;thread=5550142921</code>, <code>&amp;app=quackers&amp;quack=2</code>, <code>&amp;app=quackers&amp;profile=jordan</code>,
 <code>&amp;app=quackers&amp;hatch=1</code> (account setup),
-<code>&amp;scene=incoming|groupIncoming|call|groupCall|videoCall|endCall|offer|notify|text|quack|mention|admin</code>,
+<code>&amp;scene=incoming|groupIncoming|call|groupCall|videoCall|endCall|offer|notify|text|arrived|quack|mention|admin</code>,
+<code>&amp;app=quackers&amp;loggedout=1</code>, <code>&amp;app=settings&amp;page=cloud&amp;stolen=1</code>,
 <code>&amp;clean=1</code> hides the bar.
 In the preview, texts you send get a mock reply.</p>
 <h2 id="docs">Docs<a class="headerlink" href="#docs" title="Permanent link">&para;</a></h2>
