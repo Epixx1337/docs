@@ -2299,6 +2299,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#quackers-says-no-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quackers says "No connection"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-a-player-change-their-quackers-handle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can a player change their Quackers handle?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-remove-a-quack-or-a-rude-account-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How do I remove a quack or a rude account name?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#can-other-resources-send-texts-or-notifications" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2534,6 +2567,34 @@
     
   
     Duckcam video calls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quackers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quackers
   
 
     
@@ -2983,6 +3044,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#quackers-says-no-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quackers says "No connection"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-a-player-change-their-quackers-handle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can a player change their Quackers handle?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-remove-a-quack-or-a-rude-account-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How do I remove a quack or a rude account name?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#can-other-resources-send-texts-or-notifications" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3074,6 +3168,12 @@
 <p>The decline key (<code>N</code>) only declines a call that is still ringing. To end a call you're in, open the phone and tap the red button. This keeps players who talk with <code>N</code> from hanging up by accident. Players can rebind both keys under Settings → Key Bindings → FiveM.</p>
 <h2 id="wait-a-moment-before-calling-again-or-slow-down">"Wait a moment before calling again" or "Slow down"<a class="headerlink" href="#wait-a-moment-before-calling-again-or-slow-down" title="Permanent link">&para;</a></h2>
 <p>The server rate-limits calls, texts and contact changes so a modified client can't spam other players or the database. Normal use never hits the limits; see <a href="../config/">Configuration</a>.</p>
+<h2 id="quackers-says-no-connection">Quackers says "No connection"<a class="headerlink" href="#quackers-says-no-connection" title="Permanent link">&para;</a></h2>
+<p>Quackers needs cell service or Wi-Fi, like calls and texts. Check the signal bars, airplane mode and mobile data in quick settings. With cell towers on, move into coverage or join a Wi-Fi network.</p>
+<h2 id="can-a-player-change-their-quackers-handle">Can a player change their Quackers handle?<a class="headerlink" href="#can-a-player-change-their-quackers-handle" title="Permanent link">&para;</a></h2>
+<p>Not from the phone, so mentions keep pointing at the right person. Players can change their display name and bio from their profile. An admin can change the handle in <code>/phoneadmin</code> → Quackers.</p>
+<h2 id="how-do-i-remove-a-quack-or-a-rude-account-name">How do I remove a quack or a rude account name?<a class="headerlink" href="#how-do-i-remove-a-quack-or-a-rude-account-name" title="Permanent link">&para;</a></h2>
+<p>Open <code>/phoneadmin</code> → Quackers. Find the account by handle, name or citizen ID, then rename it or list its quacks and delete them. A deleted quack disappears from every open phone straight away. To turn the app off for everyone, set <code>quackers.enabled = false</code> in <code>config/shared.lua</code>. See <a href="../quackers/">Quackers</a>.</p>
 <h2 id="can-other-resources-send-texts-or-notifications">Can other resources send texts or notifications?<a class="headerlink" href="#can-other-resources-send-texts-or-notifications" title="Permanent link">&para;</a></h2>
 <p>Yes. <code>exports.qbx_phone:SendMessage(sender, number, body)</code> on the server sends a text; the sender can be a short label such as <code>'Bennys'</code>. <code>exports.qbx_phone:Notify({...})</code> on the client shows a notification. npwd's <code>emitMessage</code> and <code>createNotification</code> keep working too. See <a href="../exports/">Exports and events</a>.</p>
 <h2 id="can-i-add-my-own-app">Can I add my own app?<a class="headerlink" href="#can-i-add-my-own-app" title="Permanent link">&para;</a></h2>

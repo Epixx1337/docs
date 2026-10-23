@@ -2455,6 +2455,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../quackers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quackers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../exports/" class="md-nav__link">
         
   
@@ -2862,6 +2890,7 @@ slab phone with a duck-bill home button, available as a second style.</p>
 <li><strong>Duckcam</strong> video calls, relayed through a Cloudflare TURN key you provide</li>
 <li>Contacts, favourites and contact groups</li>
 <li><strong>Peeps</strong> texting to contacts or any number, with read receipts and unread badges</li>
+<li><strong>Quackers</strong> social feed: quack, requack, like, reply, mention and follow, with admin moderation</li>
 <li>Give your number to the player you are facing (radial menu), with an accept prompt</li>
 <li>Optional <strong>SIM cards</strong>: the phone becomes a one-slot ox_inventory container and the number lives on the SIM</li>
 <li>Optional <strong>cell towers</strong> with configurable coverage and an in-world debug view</li>
@@ -2871,7 +2900,7 @@ slab phone with a duck-bill home button, available as a second style.</p>
 <li>Duck ringtones and notification tones, synthesized in the browser (no audio files to license)</li>
 <li>Ring, vibrate and silent modes, do not disturb, and power off/on with a Qbox boot screen</li>
 <li>Settings stored per player in KVP, with Duck Cloud backup and restore</li>
-<li><code>/phoneadmin</code> panel for players, numbers, SIM cards, contacts and call history</li>
+<li><code>/phoneadmin</code> panel for players, numbers, SIM cards, contacts, call history and Quackers moderation</li>
 <li>Drop-in replacement for npwd exports used by other resources</li>
 </ul>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
@@ -2896,8 +2925,9 @@ In the browser, F1 opens and closes the phone and Escape closes it. "closed phon
 keeps the closed Flip-Flop on screen (in game it goes back in the pocket) and
 "hide phone" puts it away again. Useful URL options: <code>?open=1</code>, <code>&amp;tablet=1</code>,
 <code>&amp;closed=1</code>, <code>&amp;theme=slab</code>, <code>&amp;off=1</code>, <code>&amp;setup=1</code>, <code>&amp;app=contacts</code>,
-<code>&amp;app=messages&amp;thread=5550142921</code>,
-<code>&amp;scene=incoming|groupIncoming|call|groupCall|videoCall|endCall|offer|notify|text|admin</code>,
+<code>&amp;app=messages&amp;thread=5550142921</code>, <code>&amp;app=quackers&amp;quack=2</code>, <code>&amp;app=quackers&amp;profile=jordan</code>,
+<code>&amp;app=quackers&amp;hatch=1</code> (account setup),
+<code>&amp;scene=incoming|groupIncoming|call|groupCall|videoCall|endCall|offer|notify|text|quack|mention|admin</code>,
 <code>&amp;clean=1</code> hides the bar.
 In the preview, texts you send get a mock reply.</p>
 <h2 id="docs">Docs<a class="headerlink" href="#docs" title="Permanent link">&para;</a></h2>
@@ -2910,6 +2940,7 @@ In the preview, texts you send get a mock reply.</p>
 <li><a href="../built-in-apps/">Built-in apps</a>, with starter files in <a href="https://github.com/Epixx1337/qbx_phone/blob/main/templates/app">templates/app</a></li>
 <li><a href="../voice/">Voice and group calls</a></li>
 <li><a href="../duckcam/">Duckcam video calls</a></li>
+<li><a href="../quackers/">Quackers</a></li>
 <li><a href="../exports/">Exports, events and npwd compatibility</a></li>
 <li><a href="../admin/">Admin panel</a></li>
 </ul>

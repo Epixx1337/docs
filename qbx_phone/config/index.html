@@ -2444,6 +2444,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../quackers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quackers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../exports/" class="md-nav__link">
         
   
@@ -2863,6 +2891,11 @@
 <td>Most people in one call, caller included</td>
 </tr>
 <tr>
+<td><code>quackers.enabled</code></td>
+<td><code>true</code></td>
+<td>The Quackers social feed, see <a href="../quackers/">quackers.md</a></td>
+</tr>
+<tr>
 <td><code>share.distance</code></td>
 <td><code>3.0</code></td>
 <td>How close the other player must be to receive your number</td>
@@ -2995,11 +3028,17 @@ Changing a default only affects players who never had the mapping before.</p>
 <td><code>10</code></td>
 <td>Texts one player can send per 10 seconds</td>
 </tr>
+<tr>
+<td><code>limits.quacksPerMinute</code></td>
+<td><code>6</code></td>
+<td>Quacks and replies one player can post per minute</td>
+</tr>
 </tbody>
 </table>
 <p>Everything else a player can repeat is rate limited on the server too: 5 calls per 10
 seconds, 20 contact, group, thread or recents changes per 10 seconds, 5 wrong Wi-Fi
-passwords per minute and 3 Duck Cloud backups per 30 seconds.</p>
+passwords per minute, 3 Duck Cloud backups per 30 seconds, and 20 Quackers likes,
+requacks or follows per 10 seconds.</p>
 <h2 id="player-settings">Player settings<a class="headerlink" href="#player-settings" title="Permanent link">&para;</a></h2>
 <p>Ringtone, tones, sound mode, volume, wallpaper, shell colour, style, size, do not
 disturb, airplane mode and the power state are stored in the player's local KVP, keyed by character. With
@@ -3013,7 +3052,9 @@ deleting a character removes its phone data:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s1">'qbx_phone_contacts'</span><span class="p">,</span><span class="w"> </span><span class="s1">'citizenid'</span><span class="p">},</span>
 <span class="p">{</span><span class="s1">'qbx_phone_groups'</span><span class="p">,</span><span class="w"> </span><span class="s1">'citizenid'</span><span class="p">},</span>
 <span class="p">{</span><span class="s1">'qbx_phone_cloud'</span><span class="p">,</span><span class="w"> </span><span class="s1">'citizenid'</span><span class="p">},</span>
+<span class="p">{</span><span class="s1">'qbx_phone_quackers_accounts'</span><span class="p">,</span><span class="w"> </span><span class="s1">'citizenid'</span><span class="p">},</span>
 </code></pre></div>
+<p>Deleting the Quackers account also deletes its quacks, likes and follows.</p>
 <p>Call history and texts are stored per phone number, not per character, and are left
 alone. With SIM cards they move with the SIM. <code>qbx_phone_simcards</code> is also keyed by
 number; its <code>citizenid</code> column only records who used the SIM last.</p>

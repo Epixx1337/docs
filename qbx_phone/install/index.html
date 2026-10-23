@@ -2444,6 +2444,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../quackers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quackers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../exports/" class="md-nav__link">
         
   
@@ -2846,7 +2874,7 @@
 </tr>
 <tr>
 <td><a href="https://github.com/CommunityOx/oxmysql">oxmysql</a></td>
-<td>contacts, groups, calls, texts, SIM cards, cloud backups</td>
+<td>contacts, groups, calls, texts, Quackers, SIM cards, cloud backups</td>
 </tr>
 <tr>
 <td><a href="https://github.com/CommunityOx/ox_inventory">ox_inventory</a></td>
@@ -2881,8 +2909,9 @@
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s1">'qbx_phone_contacts'</span><span class="p">,</span><span class="w"> </span><span class="s1">'citizenid'</span><span class="p">},</span>
 <span class="p">{</span><span class="s1">'qbx_phone_groups'</span><span class="p">,</span><span class="w"> </span><span class="s1">'citizenid'</span><span class="p">},</span>
 <span class="p">{</span><span class="s1">'qbx_phone_cloud'</span><span class="p">,</span><span class="w"> </span><span class="s1">'citizenid'</span><span class="p">},</span>
+<span class="p">{</span><span class="s1">'qbx_phone_quackers_accounts'</span><span class="p">,</span><span class="w"> </span><span class="s1">'citizenid'</span><span class="p">},</span>
 </code></pre></div>
-<p>Call history and texts belong to the phone number, not the character, so they are left alone.</p>
+<p>Deleting the Quackers account also deletes its quacks, likes and follows. Call history and texts belong to the phone number, not the character, so they are left alone.</p>
 </li>
 </ol>
 <p>The UI ships prebuilt in <code>web/build</code>. You only need <a href="https://bun.sh">bun</a> if you change the UI source.</p>
@@ -2961,9 +2990,14 @@
 <td>Who can open <code>/phoneadmin</code></td>
 </tr>
 <tr>
+<td><code>quackers.enabled</code></td>
+<td><code>config/shared.lua</code></td>
+<td>The Quackers social feed (on by default)</td>
+</tr>
+<tr>
 <td><code>limits</code></td>
 <td><code>config/server.lua</code></td>
-<td>Contacts, groups, and how many texts a player can send per 10 seconds</td>
+<td>Contacts, groups, how many texts a player can send per 10 seconds and how many quacks per minute</td>
 </tr>
 </tbody>
 </table>
@@ -2973,6 +3007,7 @@
 <li>[ ] The radial menu's "give number" entry shows an accept prompt to the player you face</li>
 <li>[ ] Two players can call each other and hear each other through pma-voice</li>
 <li>[ ] A text sent in Peeps arrives, shows a badge, and the badge clears when the conversation is opened</li>
+<li>[ ] Quackers asks for a handle the first time, and a quack from one player shows up as "new quacks" for another</li>
 <li>[ ] <code>/phoneadmin</code> opens for an admin</li>
 </ul>
 

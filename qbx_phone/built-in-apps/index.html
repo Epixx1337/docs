@@ -2342,6 +2342,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../quackers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quackers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../exports/" class="md-nav__link">
         
   
@@ -2918,7 +2946,10 @@ server don't belong here; register them from your own resource instead (see
 </table>
 <p>Peeps is a complete worked example of every row above: <code>Messages.svelte</code>,
 <code>PeepsCover.svelte</code>, <code>messages.svelte.js</code>, <code>server/modules/messages.lua</code> and the
-<code>qbx_phone_messages</code> table.</p>
+<code>qbx_phone_messages</code> table. Quackers is a larger one with its own config toggle
+(<code>requires</code> in the registry), broadcasts to every phone, a notification category and
+an admin tab: <code>Quackers.svelte</code>, <code>quackers/QuackCard.svelte</code>, <code>QuackersCover.svelte</code>,
+<code>quackers.svelte.js</code>, <code>server/modules/quackers.lua</code> and <code>server/quackers.lua</code>.</p>
 <h2 id="layout-rules">Layout rules<a class="headerlink" href="#layout-rules" title="Permanent link">&para;</a></h2>
 <p>The app component gets two props: <code>wide</code> (true in the tablet) and <code>mode</code> (<code>'phone'</code>
 or <code>'tablet'</code>). The cover is a separate component because the full app isn't mounted
