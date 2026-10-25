@@ -38,7 +38,7 @@ How it works:
 
 - Every phone item becomes an ox_inventory **container with one slot** that only
   accepts the SIM item. **Using the phone item opens that SIM tray**; the phone
-  itself opens with the keybind (`F1`) or the radial menu.
+  itself opens with the keybind (`M`) or the radial menu.
 - A new SIM gets a unique number when it is created. Give a specific number by
   passing metadata: `exports.ox_inventory:AddItem(source, 'simcard', 1, { number = '5551234567' })`.
 - Your number is the SIM in the first phone you carry that has one. Lose the SIM

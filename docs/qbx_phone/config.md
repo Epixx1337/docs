@@ -19,7 +19,7 @@
 
 | Key | Default | Description |
 | --- | --- | --- |
-| `openKey` | `'F1'` | Opens and closes the phone. Players can rebind it in the FiveM key settings |
+| `openKey` | `'M'` | Opens and closes the phone. Players can rebind it in the FiveM key settings. Changing it only affects players who haven't used the phone yet; FiveM keeps everyone else's saved key |
 | `answerKey` / `declineKey` | `'Y'` / `'N'` | Answer or decline a ringing call while the phone is closed. Neither works while dead, downed or cuffed. To hang up, open the phone |
 | `walkWhileOpen` | `true` | Keep movement while the phone is open. Typing in a text field always takes full focus |
 | `themes` | `{ 'flip', 'slab' }` | Phone styles players can pick in Settings |

@@ -55,7 +55,7 @@ bun run build
 ```
 
 `bun run dev` serves the UI in a browser with mock data and a control bar.
-In the browser, F1 opens and closes the phone and Escape closes it. "closed phone"
+In the browser, M opens and closes the phone and Escape closes it. "closed phone"
 keeps the closed Flip-Flop on screen (in game it goes back in the pocket) and
 "hide phone" puts it away again. Useful URL options: `?open=1`, `&tablet=1`,
 `&closed=1`, `&theme=slab`, `&off=1`, `&setup=1`, `&app=contacts`,

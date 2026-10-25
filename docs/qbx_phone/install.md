@@ -60,7 +60,7 @@ The keys people change most. Everything else is on the [configuration](config.md
 
 | Key | File | What it does |
 | --- | --- | --- |
-| `openKey` | `config/client.lua` | Opens the phone (`F1`). Players can rebind it |
+| `openKey` | `config/client.lua` | Opens the phone (`M`). Players can rebind it |
 | `answerKey` / `declineKey` | `config/client.lua` | Answer or decline a ringing call while the phone is closed (`Y` / `N`) |
 | `themes` / `defaultTheme` | `config/client.lua` | Which styles players can pick, and the default. `'flip'` is the Flip-Flop, `'slab'` is the Bill |
 | `allowTablet` | `config/client.lua` | Lets the Flip-Flop unfold into a tablet |
@@ -71,7 +71,7 @@ The keys people change most. Everything else is on the [configuration](config.md
 
 ## After installing: sanity checklist
 
-- [ ] `F1` opens the phone. A new character sees it switched off; the power button boots it
+- [ ] `M` opens the phone. A new phone boots up by itself the first time and shows setup
 - [ ] The radial menu's "give number" entry shows an accept prompt to the player you face
 - [ ] Two players can call each other and hear each other through pma-voice
 - [ ] A text sent in Peeps arrives, shows a badge, and the badge clears when the conversation is opened

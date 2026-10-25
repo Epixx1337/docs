@@ -10,7 +10,7 @@
 
 ## Using the phone item opens a small inventory instead of the phone
 
-That's SIM cards at work. With `simcards.enabled`, every phone is a one-slot container, and using the item opens the SIM tray. The phone itself opens with the keybind (`F1`) or the radial menu. See [Items and SIM cards](items.md).
+That's SIM cards at work. With `simcards.enabled`, every phone is a one-slot container, and using the item opens the SIM tray. The phone itself opens with the keybind (`M`) or the radial menu. See [Items and SIM cards](items.md).
 
 ## "Your phone has no SIM card"
 
