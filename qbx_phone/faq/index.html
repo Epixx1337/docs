@@ -2299,10 +2299,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quackers-says-no-connection" class="md-nav__link">
+  <a href="#flock-says-no-connection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quackers says "No connection"
+        Flock says "No connection"
       
     </span>
   </a>
@@ -2310,10 +2310,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#can-a-player-change-their-quackers-handle" class="md-nav__link">
+  <a href="#can-a-player-change-their-flock-handle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Can a player change their Quackers handle?
+        Can a player change their Flock handle?
       
     </span>
   </a>
@@ -2616,7 +2616,7 @@
   <span class="md-ellipsis">
     
   
-    Quackers
+    Flock
   
 
     
@@ -3066,10 +3066,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quackers-says-no-connection" class="md-nav__link">
+  <a href="#flock-says-no-connection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quackers says "No connection"
+        Flock says "No connection"
       
     </span>
   </a>
@@ -3077,10 +3077,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#can-a-player-change-their-quackers-handle" class="md-nav__link">
+  <a href="#can-a-player-change-their-flock-handle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Can a player change their Quackers handle?
+        Can a player change their Flock handle?
       
     </span>
   </a>
@@ -3213,12 +3213,12 @@
 <p>The decline key (<code>N</code>) only declines a call that is still ringing. To end a call you're in, open the phone and tap the red button. This keeps players who talk with <code>N</code> from hanging up by accident. Players can rebind both keys under Settings → Key Bindings → FiveM.</p>
 <h2 id="wait-a-moment-before-calling-again-or-slow-down">"Wait a moment before calling again" or "Slow down"<a class="headerlink" href="#wait-a-moment-before-calling-again-or-slow-down" title="Permanent link">&para;</a></h2>
 <p>The server rate-limits calls, texts and contact changes so a modified client can't spam other players or the database. Normal use never hits the limits; see <a href="../config/">Configuration</a>.</p>
-<h2 id="quackers-says-no-connection">Quackers says "No connection"<a class="headerlink" href="#quackers-says-no-connection" title="Permanent link">&para;</a></h2>
-<p>Quackers needs cell service or Wi-Fi, like calls and texts. Check the signal bars, airplane mode and mobile data in quick settings. With cell towers on, move into coverage or join a Wi-Fi network.</p>
-<h2 id="can-a-player-change-their-quackers-handle">Can a player change their Quackers handle?<a class="headerlink" href="#can-a-player-change-their-quackers-handle" title="Permanent link">&para;</a></h2>
-<p>Not from the phone, so mentions keep pointing at the right person. Players can change their display name and bio from their profile. An admin can change the handle in <code>/phoneadmin</code> → Quackers.</p>
+<h2 id="flock-says-no-connection">Flock says "No connection"<a class="headerlink" href="#flock-says-no-connection" title="Permanent link">&para;</a></h2>
+<p>Flock needs cell service or Wi-Fi, like calls and texts. Check the signal bars, airplane mode and mobile data in quick settings. With cell towers on, move into coverage or join a Wi-Fi network.</p>
+<h2 id="can-a-player-change-their-flock-handle">Can a player change their Flock handle?<a class="headerlink" href="#can-a-player-change-their-flock-handle" title="Permanent link">&para;</a></h2>
+<p>Not from the phone, so mentions keep pointing at the right person. Players can change their display name and bio from their profile. An admin can change the handle in <code>/phoneadmin</code> → Flock.</p>
 <h2 id="how-do-i-remove-a-quack-or-a-rude-account-name">How do I remove a quack or a rude account name?<a class="headerlink" href="#how-do-i-remove-a-quack-or-a-rude-account-name" title="Permanent link">&para;</a></h2>
-<p>Open <code>/phoneadmin</code> → Quackers. Find the account by handle, name or citizen ID, then rename it or list its quacks and delete them. A deleted quack disappears from every open phone straight away. To turn the app off for everyone, set <code>quackers.enabled = false</code> in <code>config/shared.lua</code>. See <a href="../quackers/">Quackers</a>.</p>
+<p>Open <code>/phoneadmin</code> → Flock. Find the account by handle, name or citizen ID, then rename it or list its quacks and delete them. A deleted quack disappears from every open phone straight away. To turn the app off for everyone, set <code>quackers.enabled = false</code> in <code>config/shared.lua</code>. See <a href="../quackers/">Flock</a>.</p>
 <h2 id="can-other-resources-send-texts-or-notifications">Can other resources send texts or notifications?<a class="headerlink" href="#can-other-resources-send-texts-or-notifications" title="Permanent link">&para;</a></h2>
 <p>Yes. <code>exports.qbx_phone:SendMessage(sender, number, body)</code> on the server sends a text; the sender can be a short label such as <code>'Bennys'</code>. <code>exports.qbx_phone:Notify({...})</code> on the client shows a notification. npwd's <code>emitMessage</code> and <code>createNotification</code> keep working too. See <a href="../exports/">Exports and events</a>.</p>
 <h2 id="can-i-add-my-own-app">Can I add my own app?<a class="headerlink" href="#can-i-add-my-own-app" title="Permanent link">&para;</a></h2>
@@ -3226,7 +3226,7 @@
 <h2 id="do-players-keep-their-settings-on-a-new-phone">Do players keep their settings on a new phone?<a class="headerlink" href="#do-players-keep-their-settings-on-a-new-phone" title="Permanent link">&para;</a></h2>
 <p>Contacts, groups and settings live on the phone. A new phone starts the setup screen, which offers to restore the <strong>Duck Cloud</strong> backup of the character who sets it up. Duck Cloud backs up automatically about ten seconds after a change, as long as it's on in Settings → Duck Cloud.</p>
 <h2 id="what-happens-when-a-phone-is-stolen">What happens when a phone is stolen?<a class="headerlink" href="#what-happens-when-a-phone-is-stolen" title="Permanent link">&para;</a></h2>
-<p>The thief sees what's on that phone, not their own: its contacts, texts, call history, wallpaper and the Quackers account it's logged into. Because the number is on the phone (or on the SIM inside it), they also receive the owner's calls and texts. The owner gets back on their feet by using a new phone (with SIM cards off, the number moves to it and the stolen one loses service), restoring from Duck Cloud on the setup screen, and logging out other phones in Quackers → Edit profile. See <a href="../items/#what-lives-on-a-phone">Items and SIM cards</a>.</p>
+<p>The thief sees what's on that phone, not their own: its contacts, texts, call history, wallpaper and the Flock account it's logged into. Because the number is on the phone (or on the SIM inside it), they also receive the owner's calls and texts. The owner gets back on their feet by using a new phone (with SIM cards off, the number moves to it and the stolen one loses service), restoring from Duck Cloud on the setup screen, and logging out other phones in Flock → Edit profile. See <a href="../items/#what-lives-on-a-phone">Items and SIM cards</a>.</p>
 <h2 id="i-sent-a-text-but-it-only-says-sent">I sent a text but it only says "Sent"<a class="headerlink" href="#i-sent-a-text-but-it-only-says-sent" title="Permanent link">&para;</a></h2>
 <p>The other phone has no service right now: no signal, airplane mode, powered off or no SIM. The text waits on the server and arrives within a few seconds of that phone getting service back, then the receipt changes to "Delivered". Calls to a phone without service don't ring at all.</p>
 <h2 id="something-else">Something else?<a class="headerlink" href="#something-else" title="Permanent link">&para;</a></h2>
