@@ -3188,7 +3188,7 @@
 <h2 id="the-phone-doesnt-open">The phone doesn't open<a class="headerlink" href="#the-phone-doesnt-open" title="Permanent link">&para;</a></h2>
 <ul>
 <li>The character needs a <code>phone</code> item in their inventory, and the item has to exist in <code>ox_inventory/data/items.lua</code>.</li>
-<li>A brand-new phone opens straight into setup. A phone someone switched off shows the power screen; press the power button on the side to boot it.</li>
+<li>A brand-new phone boots up by itself the first time it is opened, then shows setup. A phone someone switched off shows the power screen; press the power button on the side to boot it.</li>
 <li>If using the item does nothing, add <code>client = { export = 'qbx_phone.UseItem' }</code> to the <code>phone</code> item. See <a href="../install/">Install</a>.</li>
 <li>The phone won't open while dead, in last stand, handcuffed, in the pause menu or swimming underwater.</li>
 <li>Another resource may have disabled it through npwd's <code>setPhoneDisabled</code>.</li>
