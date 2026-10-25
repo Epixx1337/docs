@@ -21,10 +21,11 @@
         weight = 190,
         stack = false,
         consume = 0,
+        client = { export = 'qbx_phone.UseItem' },
     },
     ```
 
-    The stock ox_inventory `phone` hook still calls npwd's export, which qbx_phone answers, so using the item opens the phone without editing ox_inventory.
+    The `export` line makes using the item open the phone. If you leave it out, ox_inventory's old npwd hook still opens it, but that stops working after qbx_phone restarts until the player rejoins.
 
 3. **Ensure it after its dependencies.** Inside a `[qbx]` folder, `ensure [qbx]` covers it, as long as ox_inventory and pma-voice start first.
 4. **Start the server.** All tables are created automatically.

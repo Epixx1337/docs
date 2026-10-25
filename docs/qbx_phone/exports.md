@@ -5,6 +5,7 @@
 | Export | Description |
 | --- | --- |
 | `OpenPhone()` / `ClosePhone()` | Open or close the phone |
+| `UseItem()` | Opens or closes the phone, waiting for the inventory to close first. Used by the `phone` item |
 | `IsPhoneOpen()` | `boolean` |
 | `HasPhone()` | `true` when the player carries a phone |
 | `GetDevice()` | `{ serial, number, simcards }` or `nil` |
@@ -63,7 +64,7 @@ npwd is removed. Don't run npwd at the same time.
 | npwd export | Behaviour |
 | --- | --- |
 | `setPhoneVisible`, `isPhoneVisible` | Open/close and state |
-| `setPhoneDisabled`, `isPhoneDisabled` | Blocks opening the phone |
+| `setPhoneDisabled`, `isPhoneDisabled` | Blocks opening the phone. Calls from ox_inventory are ignored, because qbx_phone already tracks who carries a phone |
 | `createNotification` | Phone notification |
 | `createSystemNotification` | Notification with Accept/Decline, `onConfirm`/`onCancel` are called |
 | `removeSystemNotification` | Dismiss by id |

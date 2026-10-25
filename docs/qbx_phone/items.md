@@ -10,12 +10,13 @@ Replace the npwd `phone` entry in `ox_inventory/data/items.lua`:
     weight = 190,
     stack = false,
     consume = 0,
+    client = { export = 'qbx_phone.UseItem' },
 },
 ```
 
-The stock ox_inventory client still has a `phone` item hook that calls
-`exports.npwd:setPhoneVisible`. qbx_phone answers those calls, so using the item
-opens the phone without editing ox_inventory.
+The `export` line makes using the item open the phone. Without it, ox_inventory
+falls back to its old npwd hook. That still opens the phone, but stops working
+after qbx_phone is restarted until the player rejoins.
 
 Every phone gets a `serial` in its metadata the first time it is created or seen.
 
