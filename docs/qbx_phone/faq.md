@@ -3,7 +3,7 @@
 ## The phone doesn't open
 
 - The character needs a `phone` item in their inventory, and the item has to exist in `ox_inventory/data/items.lua`.
-- A brand-new phone opens straight into setup. A phone someone switched off shows the power screen; press the power button on the side to boot it.
+- A brand-new phone boots up by itself the first time it is opened, then shows setup. A phone someone switched off shows the power screen; press the power button on the side to boot it.
 - If using the item does nothing, add `client = { export = 'qbx_phone.UseItem' }` to the `phone` item. See [Install](install.md).
 - The phone won't open while dead, in last stand, handcuffed, in the pause menu or swimming underwater.
 - Another resource may have disabled it through npwd's `setPhoneDisabled`.
