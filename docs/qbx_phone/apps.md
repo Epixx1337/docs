@@ -94,7 +94,7 @@ is closed. Without `cover = true` the cover shows the clock instead.
 
 - **Phone first.** Design `phone` (286 px wide) first, then give `tablet` a real
   two-pane or grid layout: list on the left and detail on the right, keypad next to
-  history, a two-column grid, and so on. The built-in Phone, Flock, Settings and
+  history, a two-column grid, and so on. The built-in Phone, Quackers, Settings and
   Duckcam apps all do this.
 - **Unfolding happens while your app is open.** The layout changes size in place,
   without a reload. Don't store layout in JavaScript at load time; use media queries

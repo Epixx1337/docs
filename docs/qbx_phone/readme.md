@@ -17,7 +17,7 @@ slab phone with a duck-bill home button, available as a second style.
 - **Duckcam** video calls, relayed through a Cloudflare TURN key you provide
 - Contacts, favourites and contact groups
 - **Peeps** texting to contacts or any number, with read receipts and unread badges
-- **Quackers** social feed: quack, requack, like, reply, mention and follow, with admin moderation
+- **Flock** social feed: quack, requack, like, reply, mention and follow, with admin moderation
 - Give your number to the player you are facing (radial menu), with an accept prompt
 - Optional **SIM cards**: the phone becomes a one-slot ox_inventory container and the number lives on the SIM
 - Optional **cell towers** with configurable coverage and an in-world debug view
@@ -29,7 +29,7 @@ slab phone with a duck-bill home button, available as a second style.
 - Contacts, settings, texts and logins live on the phone, so a stolen phone shows its owner's data
 - Texts to a phone without service wait and arrive when it gets signal back
 - Duck Cloud backs up contacts and settings so a new phone can restore them
-- `/phoneadmin` panel for players, numbers, SIM cards, contacts, call history and Quackers moderation
+- `/phoneadmin` panel for players, numbers, SIM cards, contacts, call history and Flock moderation
 - Drop-in replacement for npwd exports used by other resources
 
 ## Requirements
@@ -76,7 +76,7 @@ In the preview, texts you send get a mock reply.
 - [Built-in apps](built-in-apps.md), with starter files in [templates/app](https://github.com/Epixx1337/qbx_phone/blob/main/templates/app)
 - [Voice and group calls](voice.md)
 - [Duckcam video calls](duckcam.md)
-- [Quackers](quackers.md)
+- [Flock](quackers.md)
 - [Exports, events and npwd compatibility](exports.md)
 - [Admin panel](admin.md)
 

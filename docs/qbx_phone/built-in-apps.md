@@ -31,7 +31,7 @@ server don't belong here; register them from your own resource instead (see
 
 Peeps is a complete worked example of every row above: `Messages.svelte`,
 `PeepsCover.svelte`, `messages.svelte.js`, `server/modules/messages.lua` and the
-`qbx_phone_messages` table. Quackers is a larger one with its own config toggle
+`qbx_phone_messages` table. Flock is a larger one with its own config toggle
 (`requires` in the registry), broadcasts to every phone, a notification category and
 an admin tab: `Quackers.svelte`, `quackers/QuackCard.svelte`, `QuackersCover.svelte`,
 `quackers.svelte.js`, `server/modules/quackers.lua` and `server/quackers.lua`.

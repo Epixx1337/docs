@@ -48,17 +48,17 @@ The decline key (`N`) only declines a call that is still ringing. To end a call 
 
 The server rate-limits calls, texts and contact changes so a modified client can't spam other players or the database. Normal use never hits the limits; see [Configuration](config.md).
 
-## Quackers says "No connection"
+## Flock says "No connection"
 
-Quackers needs cell service or Wi-Fi, like calls and texts. Check the signal bars, airplane mode and mobile data in quick settings. With cell towers on, move into coverage or join a Wi-Fi network.
+Flock needs cell service or Wi-Fi, like calls and texts. Check the signal bars, airplane mode and mobile data in quick settings. With cell towers on, move into coverage or join a Wi-Fi network.
 
-## Can a player change their Quackers handle?
+## Can a player change their Flock handle?
 
-Not from the phone, so mentions keep pointing at the right person. Players can change their display name and bio from their profile. An admin can change the handle in `/phoneadmin` → Quackers.
+Not from the phone, so mentions keep pointing at the right person. Players can change their display name and bio from their profile. An admin can change the handle in `/phoneadmin` → Flock.
 
 ## How do I remove a quack or a rude account name?
 
-Open `/phoneadmin` → Quackers. Find the account by handle, name or citizen ID, then rename it or list its quacks and delete them. A deleted quack disappears from every open phone straight away. To turn the app off for everyone, set `quackers.enabled = false` in `config/shared.lua`. See [Quackers](quackers.md).
+Open `/phoneadmin` → Flock. Find the account by handle, name or citizen ID, then rename it or list its quacks and delete them. A deleted quack disappears from every open phone straight away. To turn the app off for everyone, set `quackers.enabled = false` in `config/shared.lua`. See [Flock](quackers.md).
 
 ## Can other resources send texts or notifications?
 
@@ -74,7 +74,7 @@ Contacts, groups and settings live on the phone. A new phone starts the setup sc
 
 ## What happens when a phone is stolen?
 
-The thief sees what's on that phone, not their own: its contacts, texts, call history, wallpaper and the Quackers account it's logged into. Because the number is on the phone (or on the SIM inside it), they also receive the owner's calls and texts. The owner gets back on their feet by using a new phone (with SIM cards off, the number moves to it and the stolen one loses service), restoring from Duck Cloud on the setup screen, and logging out other phones in Quackers → Edit profile. See [Items and SIM cards](items.md#what-lives-on-a-phone).
+The thief sees what's on that phone, not their own: its contacts, texts, call history, wallpaper and the Flock account it's logged into. Because the number is on the phone (or on the SIM inside it), they also receive the owner's calls and texts. The owner gets back on their feet by using a new phone (with SIM cards off, the number moves to it and the stolen one loses service), restoring from Duck Cloud on the setup screen, and logging out other phones in Flock → Edit profile. See [Items and SIM cards](items.md#what-lives-on-a-phone).
 
 ## I sent a text but it only says "Sent"
 

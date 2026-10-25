@@ -25,7 +25,7 @@ towers = {
   receive calls; callers hear it as unavailable. Texts sent to it wait on the server
   and arrive, with a notification, within a few seconds of it getting service back.
   The sender sees "Sent" until then and "Delivered" after.
-- Quackers needs service too. New quacks and Quackers notifications aren't sent to a
+- Flock needs service too. New quacks and Flock notifications aren't sent to a
   phone without service.
 - The server checks signal itself when a call is placed or answered, and every
   second during the call, so a modified client can't keep a call alive.

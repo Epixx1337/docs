@@ -63,10 +63,10 @@ it, not their own data:
 | Number, call history and Peeps texts | The SIM (SIM cards on) or the phone (SIM cards off) |
 | Contacts and groups | The phone |
 | Wallpaper, ringtone, sound mode and every other setting, including power and airplane mode | The phone |
-| Quackers login | The phone. It stays logged in until someone logs it out |
+| Flock login | The phone. It stays logged in until someone logs it out |
 | Duck Cloud backup | The phone's owner, the character who set it up first |
 
-A stolen phone therefore shows its owner's contacts, texts and Quackers account to
+A stolen phone therefore shows its owner's contacts, texts and Flock account to
 the thief, and with the number on it, the thief receives the owner's calls and
 texts. To get back on their feet the owner:
 
@@ -74,7 +74,7 @@ texts. To get back on their feet the owner:
    away; with SIM cards on, they need a new SIM.
 2. Picks **Restore from Duck Cloud** on the setup screen to get their contacts,
    groups and settings back.
-3. Logs in to Quackers and uses **Edit profile → Log out other phones**.
+3. Logs in to Flock and uses **Edit profile → Log out other phones**.
 
 Only the owner can back a phone up to Duck Cloud or restore it, so a thief can't
 overwrite the owner's backup.

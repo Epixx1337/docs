@@ -9,7 +9,7 @@
 | `simcards.item` | `'simcard'` | SIM card item name |
 | `calls.ringTime` | `30` | Seconds before an unanswered call is missed |
 | `calls.maxGroupSize` | `8` | Most people in one call, caller included |
-| `quackers.enabled` | `true` | The Quackers social feed, see [quackers.md](quackers.md) |
+| `quackers.enabled` | `true` | The Flock social feed, see [quackers.md](quackers.md) |
 | `share.distance` | `3.0` | How close the other player must be to receive your number |
 | `share.cooldown` | `10` | Seconds between number shares |
 | `towers` | | See [towers.md](towers.md) |
@@ -51,7 +51,7 @@ Limit players to one style by listing just that one in `themes`.
 
 Everything else a player can repeat is rate limited on the server too: 5 calls per 10
 seconds, 20 contact, group, thread or recents changes per 10 seconds, 5 wrong Wi-Fi
-passwords per minute, 3 Duck Cloud backups per 30 seconds, and 20 Quackers likes,
+passwords per minute, 3 Duck Cloud backups per 30 seconds, and 20 Flock likes,
 requacks or follows per 10 seconds.
 
 ## Player settings
@@ -81,7 +81,7 @@ deleting a character removes its phone data:
 ```
 
 Contacts and groups are removed when the character who saved them is deleted.
-Deleting the Quackers account also deletes its quacks, likes and follows. A phone
+Deleting the Flock account also deletes its quacks, likes and follows. A phone
 whose owner was deleted registers to whoever uses it next.
 
 Call history and texts are stored per phone number, not per character, and are left
